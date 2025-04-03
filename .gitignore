@@ -1,1 +1,5 @@
 *.xls
+*.xlsx
+*.csv
+/venv
+dataProcessing.py
