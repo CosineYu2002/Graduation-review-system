@@ -2,7 +2,7 @@
     "110": [
         {
             "type": "list_selected",
-            "target": "ee_required_list_110",
+            "target": "ee_required_list_110.json",
             "min_credits": 28,
             "learn_in_departmant": true,
             "fallback_department": [
@@ -20,7 +20,7 @@
     "112": [
         {
             "type": "list_selected",
-            "target": "ee_required_list_112",
+            "target": "ee_required_list_112.json",
             "min_credits": 28,
             "learn_in_departmant": true,
             "fallback_department": [

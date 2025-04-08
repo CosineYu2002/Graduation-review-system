@@ -1,0 +1,25 @@
+{
+    "92": [
+        {
+            "type": "list_selected",
+            "target": "es_required_list_92.json",
+            "min_credits": 22,
+            "learn_in_departmant": true
+        },
+        {
+            "type": "required",
+            "target": [
+                {
+                    "name": "工程科學暨創新概論",
+                    "credits": 2,
+                    "course_id": [
+                        "E912100"
+                    ]
+                }
+            ]
+        },
+        {
+            "total_credits": 24
+        }
+    ]
+}

@@ -3,3 +3,4 @@
 *.csv
 /venv
 dataProcessing.py
+/students
