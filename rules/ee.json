@@ -1,10 +1,26 @@
 {
+    "109": [
+        {
+            "type": "list_selected",
+            "target": "ee_selected_list_109.json",
+            "min_credits": 28,
+            "learn_in_department": true,
+            "fallback_department": [
+                "E2"
+            ]
+        },
+        {
+            "type": "final",
+            "total_credits": 28,
+            "department_name": "electrical engineering"
+        }
+    ],
     "110": [
         {
             "type": "list_selected",
-            "target": "ee_required_list_110.json",
+            "target": "ee_selected_list_110.json",
             "min_credits": 28,
-            "learn_in_departmant": true,
+            "learn_in_department": true,
             "fallback_department": [
                 "E2",
                 "N2",
@@ -14,15 +30,17 @@
             ]
         },
         {
-            "total_credits": 28
+            "type": "final",
+            "total_credits": 28,
+            "department_name": "electrical engineering"
         }
     ],
     "112": [
         {
             "type": "list_selected",
-            "target": "ee_required_list_112.json",
+            "target": "ee_selected_list_112.json",
             "min_credits": 28,
-            "learn_in_departmant": true,
+            "learn_in_department": true,
             "fallback_department": [
                 "E2",
                 "N2",
@@ -33,7 +51,9 @@
             ]
         },
         {
-            "total_credits": 28
+            "type": "final",
+            "total_credits": 28,
+            "department_name": "electrical engineering"
         }
     ]
 }

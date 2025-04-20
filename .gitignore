@@ -2,5 +2,6 @@
 *.xlsx
 *.csv
 /venv
-dataProcessing.py
 /students
+test.py
+/rule_engine/__pycache__/

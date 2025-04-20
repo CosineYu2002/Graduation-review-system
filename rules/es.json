@@ -2,9 +2,9 @@
     "92": [
         {
             "type": "list_selected",
-            "target": "es_required_list_92.json",
+            "target": "es_selected_list_92.json",
             "min_credits": 22,
-            "learn_in_departmant": true
+            "learn_in_department": true
         },
         {
             "type": "required",
@@ -19,7 +19,9 @@
             ]
         },
         {
-            "total_credits": 24
+            "type": "final",
+            "total_credits": 24,
+            "department_name": "engineering science"
         }
     ]
 }
