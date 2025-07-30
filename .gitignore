@@ -1,7 +1,13 @@
 *.xls
 *.xlsx
 *.csv
-/venv
-/students
 test.py
-/rule_engine/__pycache__/
+.pytest_cache/
+.vscode/
+venv/
+students/
+rule_updater/__pycache__/
+rule_engine/__pycache__/
+rule_engine/models/__pycache__/
+crawler/__pycache__/
+tests/__pycache__/

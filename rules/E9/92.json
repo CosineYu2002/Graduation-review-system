@@ -1,0 +1,174 @@
+{
+    "admission_year": 92,
+    "department_code": "E9",
+    "rules": [
+        {
+            "type": "list_selected",
+            "description": "選修表中課程至少x學分",
+            "min_credits": 22.0,
+            "learn_in_dept": true,
+            "fallback_department": [],
+            "course_list": [
+                {
+                    "name": "工程力學",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E910300"
+                    ]
+                },
+                {
+                    "name": "工程圖學與模擬",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "E921500"
+                    ]
+                },
+                {
+                    "name": "材料力學（一）",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E911500"
+                    ]
+                },
+                {
+                    "name": "程式設計",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E911100"
+                    ]
+                },
+                {
+                    "name": "工程動力學",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E916100"
+                    ]
+                },
+                {
+                    "name": "工程數學（一）",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E921310"
+                    ]
+                },
+                {
+                    "name": "電路學",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E921000"
+                    ]
+                },
+                {
+                    "name": "熱力學",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E920100"
+                    ]
+                },
+                {
+                    "name": "材料科學",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E926200"
+                    ]
+                },
+                {
+                    "name": "資料結構",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E910100"
+                    ]
+                },
+                {
+                    "name": "工程數學（二）",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E921320"
+                    ]
+                },
+                {
+                    "name": "電子學",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E920500"
+                    ]
+                },
+                {
+                    "name": "邏輯設計",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E920400"
+                    ]
+                },
+                {
+                    "name": "電子學實驗",
+                    "credits": 1.0,
+                    "course_codes": [
+                        "E931100"
+                    ]
+                },
+                {
+                    "name": "自動控制",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E938500"
+                    ]
+                },
+                {
+                    "name": "流體力學",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E931500"
+                    ]
+                },
+                {
+                    "name": "計算機組織與組合語言",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E910400"
+                    ]
+                },
+                {
+                    "name": "數值方法",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E930400"
+                    ]
+                },
+                {
+                    "name": "熱傳學",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E937400"
+                    ]
+                },
+                {
+                    "name": "近代物理",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "E922101"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "required",
+            "description": "必修課程",
+            "learn_in_dept": true,
+            "course_list": [
+                {
+                    "name": "工程科學暨創新概論",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "E912100"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "畢業門檻",
+            "description": "24",
+            "min_credits": 24.0
+        }
+    ]
+}

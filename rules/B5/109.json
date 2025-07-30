@@ -1,0 +1,171 @@
+{
+    "admission_year": 109,
+    "department_code": "B5",
+    "rules": [
+        {
+            "type": "list_selected",
+            "description": "選修表中課程至少x學分或x門",
+            "min_credits": 4.0,
+            "learn_in_dept": true,
+            "fallback_department": [],
+            "course_list": [
+                {
+                    "name": "台灣語言基礎及寫作（台語）（一）",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "B511010"
+                    ]
+                },
+                {
+                    "name": "台灣語言基礎及寫作（台語）（二）",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "B511020"
+                    ]
+                },
+                {
+                    "name": "台灣語言基礎及寫作（客語）（一）",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "B511410"
+                    ]
+                },
+                {
+                    "name": "台灣語言基礎及寫作（客語）（二）",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "B511420"
+                    ]
+                },
+                {
+                    "name": "台灣語言基礎及寫作（原住民語）（一）",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "B511510"
+                    ]
+                },
+                {
+                    "name": "台灣語言基礎及寫作（原住民語）（二）",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "B511520"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "required",
+            "description": "列表課程皆為必修",
+            "learn_in_dept": true,
+            "course_list": [
+                {
+                    "name": "台灣文學史（一）",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "B520211"
+                    ]
+                },
+                {
+                    "name": "台灣文學史（二）",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "B520221"
+                    ]
+                },
+                {
+                    "name": "台灣文學史（三）",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "B520232"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "required",
+            "description": "列表課程皆為必修",
+            "learn_in_dept": true,
+            "course_list": [
+                {
+                    "name": "文學理論與批評（一）",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "B521410"
+                    ]
+                },
+                {
+                    "name": "文學理論與批評（二）",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "B521420"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "list_selected",
+            "description": "選修表中課程至少x學分或x門",
+            "min_credits": 3.0,
+            "learn_in_dept": true,
+            "fallback_department": [],
+            "course_list": [
+                {
+                    "name": "台灣歷史與文化",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "B514700"
+                    ]
+                },
+                {
+                    "name": "文化與社會基本議題",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "B510401"
+                    ]
+                },
+                {
+                    "name": "文化研究",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "B535400"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "list_selected",
+            "description": "選修表中課程至少x學分或x門",
+            "min_credits": 3.0,
+            "learn_in_dept": true,
+            "fallback_department": [],
+            "course_list": [
+                {
+                    "name": "文學文本解讀",
+                    "credits": 3.0,
+                    "course_codes": [
+                        "B515200"
+                    ]
+                },
+                {
+                    "name": "語言學概論（一）",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "B510810"
+                    ]
+                },
+                {
+                    "name": "語言學概論（二）",
+                    "credits": 2.0,
+                    "course_codes": [
+                        "B510820"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "final",
+            "description": "最終畢業門檻，每一份規則都需要有一個 final 規則",
+            "min_credits": 23.0
+        }
+    ]
+}
