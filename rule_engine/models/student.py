@@ -25,18 +25,17 @@ class Student:
 
     @classmethod
     def from_dict(cls, student_data: dict) -> Student:
-        courses = []
-        for course_data in student_data.get("courses", []):
-            course = StudentCourse(
-                course_name=course_data["course_name"],
-                credits=course_data["credit"],
-                grade=course_data["grade"],
-                course_code=course_data["course_code"],
-                category=course_data["category"],
-                course_type=course_data["course_type"],
-            )
-            courses.append(course)
-        return cls(name=student_data["name"], id=student_data["id"], courses=courses)
+        courses = [
+            StudentCourse.from_dict(course_data)
+            for course_data in student_data.get("courses", [])
+        ]
+
+        return cls(
+            name=student_data.get("name", ""),
+            id=student_data.get("id", ""),
+            courses=courses,
+            major=student_data.get("major", ""),
+        )
 
     @classmethod
     def from_json(cls, json_file_path: Path) -> Student:

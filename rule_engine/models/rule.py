@@ -7,6 +7,7 @@ from rule_engine.models.course import Course
 class BaseRule:
     type: str
     description: str
+    priority: int
 
     def __post_init__(self):
         if not self.type:
@@ -35,14 +36,7 @@ class BaseRule:
 
     @classmethod
     def _create_course_list(cls, course_data) -> list[Course]:
-        courses = []
-        for course_dict in course_data:
-            course = Course(
-                course_name=course_dict["name"],
-                credits=course_dict["credits"],
-                course_codes=course_dict["course_codes"],
-            )
-            courses.append(course)
+        courses = [Course.from_dict(course_dict) for course_dict in course_data]
         return courses
 
 
@@ -80,6 +74,7 @@ class ListSelectedRule(BaseRule):
             learn_in_dept=rule_data["learn_in_dept"],
             fallback_department=rule_data.get("fallback_department", []),
             course_list=cls._create_course_list(rule_data["course_list"]),
+            priority=rule_data.get("priority", 0),
         )
 
 
@@ -100,6 +95,7 @@ class RequiredRule(BaseRule):
             description=rule_data["description"],
             learn_in_dept=rule_data["learn_in_dept"],
             course_list=cls._create_course_list(rule_data["course_list"]),
+            priority=rule_data.get("priority", 0),
         )
 
 
@@ -120,6 +116,7 @@ class PrerequisiteRule(BaseRule):
             description=rule_data["description"],
             learn_in_dept=rule_data["learn_in_dept"],
             course_list=cls._create_course_list(rule_data["course_list"]),
+            priority=rule_data.get("priority", 0),
         )
 
 
@@ -140,6 +137,7 @@ class CorrespondingRule(BaseRule):
             description=rule_data["description"],
             learn_in_dept=rule_data["learn_in_dept"],
             course_list=cls._create_course_list(rule_data["course_list"]),
+            priority=rule_data.get("priority", 0),
         )
 
 
@@ -169,6 +167,7 @@ class AnySelectedRule(BaseRule):
             learn_in_dept=rule_data["learn_in_dept"],
             min_credits=rule_data.get("min_credits"),
             min_course_number=rule_data.get("min_course_number"),
+            priority=rule_data.get("priority", 0),
         )
 
 
@@ -187,4 +186,5 @@ class FinalRule(BaseRule):
             type=rule_data["type"],
             description=rule_data["description"],
             min_credits=rule_data["min_credits"],
+            priority=rule_data.get("priority", 0),
         )

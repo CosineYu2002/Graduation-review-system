@@ -13,9 +13,10 @@ class GraduationRule:
 
     @classmethod
     def from_dict(cls, year_data: dict) -> GraduationRule:
-        rules = []
-        for rule_data in year_data.get("rules", []):
-            rules.append(BaseRule.from_dict(rule_data))
+        rules = [
+            BaseRule.from_dict(rule_data) for rule_data in year_data.get("rules", [])
+        ]
+        rules.sort(key=lambda rule: rule.priority, reverse=True)
 
         return cls(
             admission_year=year_data["admission_year"],
