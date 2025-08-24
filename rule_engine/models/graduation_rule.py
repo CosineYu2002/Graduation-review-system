@@ -1,38 +1,15 @@
-from __future__ import annotations
-from dataclasses import dataclass, field
-from rule_engine.models.rule import BaseRule
-from pathlib import Path
-import json
+from pydantic import BaseModel, Field, field_validator
+from rule_engine.models.rule import Rule
 
 
-@dataclass
-class GraduationRule:
-    admission_year: int
-    department_code: str
-    rules: list[BaseRule] = field(default_factory=list)
+class GraduationRule(BaseModel):
+    admission_year: int = Field(..., gt=0, description="入學年度")
+    department_code: str = Field(..., min_length=1, description="系所代碼")
+    rules: list[Rule] = Field(default_factory=list, description="畢業規則列表")
 
+    @field_validator("department_code", mode="after")
     @classmethod
-    def from_dict(cls, year_data: dict) -> GraduationRule:
-        rules = [
-            BaseRule.from_dict(rule_data) for rule_data in year_data.get("rules", [])
-        ]
-        rules.sort(key=lambda rule: rule.priority, reverse=True)
-
-        return cls(
-            admission_year=year_data["admission_year"],
-            department_code=year_data["department_code"],
-            rules=rules,
-        )
-
-    @classmethod
-    def from_json(cls, json_file_path: Path) -> GraduationRule:
-        if not json_file_path.exists():
-            raise FileNotFoundError(f"找不到規則檔案: {json_file_path}")
-
-        try:
-            data = json.loads(json_file_path.read_text(encoding="utf-8"))
-            return cls.from_dict(data)
-        except json.JSONDecodeError as e:
-            raise ValueError(f"錯誤的 JSON 格式：{e}，路徑：{json_file_path}")
-        except Exception as e:
-            raise RuntimeError(f"讀取規則檔案時發生錯誤：{e}，路徑：{json_file_path}")
+    def validate_department_code(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("系所代碼不能為空")
+        return v.strip()
