@@ -20,10 +20,8 @@ class ListSelectedRule(BaseRule):
     min_credits: float | None = Field(None, ge=0, description="最少學分數")
     min_course_number: int | None = Field(None, ge=0, description="最少課程數量")
     learn_in_dept: bool = Field(..., description="是否限本系修課")
-    fallback_department: list[str] = Field(
-        default_factory=list, description="可替代系所"
-    )
-    course_list: list[Course] = Field(default_factory=list, description="課程列表")
+    fallback_department: list[str] = Field(..., description="可替代系所")
+    course_list: list[Course] = Field(..., description="課程列表")
 
     @model_validator(mode="after")
     def validate_min_requires(self) -> Self:
@@ -36,20 +34,31 @@ class ListSelectedRule(BaseRule):
 
 class RequiredRule(BaseRule):
     rule_type: Literal["required"] = Field("required", description="規則類型")
-    learn_in_dept: bool = Field(..., description="是否限本系修課")
-    course_list: list[Course] = Field(default_factory=list, description="課程列表")
+    course_list: list[Course] = Field(..., description="課程列表")
+    allow_external_substitute_after_fail: bool = Field(
+        ...,
+        description="是否允許外系同名同學分課程替代必修課（需先修本系課程但未通過）",
+    )
+
+
+class SelectedRule(BaseRule):
+    rule_type: Literal["selected"] = Field("selected", description="規則類型")
+    course_list: list[Course] = Field(..., description="課程列表")
+    min_credits: float = Field(..., ge=0, description="最少學分數")
+    fallback_department: list[str] = Field(..., description="可替代系所")
+    fallback_credit_limit: float = Field(..., ge=0, description="替代系所限制學分數")
 
 
 class PrerequisiteRule(BaseRule):
     rule_type: Literal["prerequisite"] = Field("prerequisite", description="規則類型")
     learn_in_dept: bool = Field(..., description="是否限本系修課")
-    course_list: list[Course] = Field(default_factory=list, description="課程列表")
+    course_list: list[Course] = Field(..., description="課程列表")
 
 
 class CorrespondingRule(BaseRule):
     rule_type: Literal["corresponding"] = Field("corresponding", description="規則類型")
     learn_in_dept: bool = Field(..., description="是否限本系修課")
-    course_list: list[Course] = Field(default_factory=list, description="課程列表")
+    course_list: list[Course] = Field(..., description="課程列表")
 
 
 class AnySelectedRule(BaseRule):
@@ -67,6 +76,13 @@ class AnySelectedRule(BaseRule):
         return self
 
 
+class CCEPProFieldRule(BaseRule):
+    rule_type: Literal["ccep_pro_field"] = Field(
+        "ccep_pro_field", description="規則類型"
+    )
+    min_credits: float = Field(..., ge=0, description="最少學分數")
+
+
 class FinalRule(BaseRule):
     rule_type: Literal["final"] = Field("final", description="規則類型")
     min_credits: float = Field(..., ge=0, description="最少學分數")
@@ -76,9 +92,11 @@ Rule = Annotated[
     Union[
         ListSelectedRule,
         RequiredRule,
+        SelectedRule,
         PrerequisiteRule,
         CorrespondingRule,
         AnySelectedRule,
+        CCEPProFieldRule,
         FinalRule,
     ],
     Field(discriminator="rule_type"),

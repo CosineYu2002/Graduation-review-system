@@ -59,10 +59,10 @@ class CourseCrawler:
         results = []
         for name, url_list in links.items():
             if len(url_list) == 0:
-                results.append({"name": name, "credits": 0.0, "course_codes": []})
+                results.append({"course_name": name, "credit": 0.0, "course_codes": []})
                 continue
 
-            result = {"name": name, "credits": 0.0, "course_codes": []}
+            result = {"course_name": name, "credit": 0.0, "course_codes": []}
             for url in url_list:
                 resp = self.session.get(url)
                 soup = BeautifulSoup(resp.text, "lxml")
@@ -85,7 +85,7 @@ class CourseCrawler:
                     except ValueError:
                         raise ValueError(f"Invalid credits value: {credits_str}")
 
-                    result["credits"] = credits
+                    result["credit"] = credits
                     result["course_codes"].append(course_code)
                     break
             results.append(result)
