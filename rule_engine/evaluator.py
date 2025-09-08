@@ -1,19 +1,14 @@
 from typing import Protocol
 from abc import abstractmethod
-from pydantic import BaseModel, Field
-from rule_engine.models.course import Course, StudentCourse, ResultCourse
-from rule_engine.models.rule import *
-from rule_engine.course_matcher import CourseMatcher, MatchConfig
+from pydantic import TypeAdapter
+from typing import Any
+from rule_engine.models.course import BaseCourse, StudentCourse, ResultCourse
 from rule_engine.models.graduation_rule import GraduationRule
+from rule_engine.models.rule import *
+from rule_engine.models.student import StudentType
 from rule_engine.exception import *
-
-
-class EvaluationResult(BaseModel):
-    is_valid: bool = Field(default=True, description="單一規則是否符合")
-    earned_credits: float = Field(default=0.0, description="已取得學分數")
-    course_list: list[ResultCourse] = Field(
-        default_factory=list, description="比對結果課程列表"
-    )
+from rule_engine.utils import GradeUtils
+from rule_engine.models.result import *
 
 
 class RuleEvaluator(Protocol):
@@ -22,7 +17,161 @@ class RuleEvaluator(Protocol):
         self,
         rule: Rule,
         student_courses: list[StudentCourse],
-        context: dict | None = None,
+        context: dict[str, Any] | None = None,
+    ) -> Result: ...
+
+
+class EvaluatorRegistry:
+    def __init__(self):
+        self._evaluators: dict[RuleTypeEnum, type[RuleEvaluator]] = {}
+
+    def register(self, rule_type: RuleTypeEnum, evaluator: type[RuleEvaluator]):
+        self._evaluators[rule_type] = evaluator
+
+    def get_evaluator(self, rule_type: RuleTypeEnum) -> type[RuleEvaluator]:
+        return self._evaluators[rule_type]
+
+    def create_evaluator(self, rule_type: RuleTypeEnum) -> RuleEvaluator:
+        evaluator_class = self.get_evaluator(rule_type)
+        return evaluator_class()
+
+
+evaluator_registry = EvaluatorRegistry()
+
+
+def register_evaluator(rule_type: RuleTypeEnum):
+    def decorator(cls):
+        evaluator_registry.register(rule_type, cls)
+        return cls
+
+    return decorator
+
+
+@register_evaluator(RuleTypeEnum.RULE_SET)
+class RuleSetEvaluator:
+    def evaluate(self, rule: RuleSet, student_courses: list[StudentCourse]) -> Result:
+        adapter = TypeAdapter(Result)
+        result = adapter.validate_python(
+            {
+                "result_type": RuleTypeEnum.RULE_SET,
+                "name": rule.name,
+                "description": rule.description,
+                "sub_rule_logic": rule.sub_rule_logic,
+            }
+        )
+        assert isinstance(result, SetResult)
+
+        for sub_rule in rule.sub_rules:
+            evaluator = evaluator_registry.create_evaluator(sub_rule.rule_type)
+            sub_result = evaluator.evaluate(sub_rule, student_courses)
+            result.sub_results.append(sub_result)
+
+        if rule.sub_rule_logic == "AND":
+            result.is_valid = all(sub.is_valid for sub in result.sub_results)
+        else:
+            result.is_valid = any(sub.is_valid for sub in result.sub_results)
+
+        result.earned_credits = sum(sub.earned_credits for sub in result.sub_results)
+        return result
+
+
+@register_evaluator(RuleTypeEnum.RULE_LIST)
+class RuleListEvaluator:
+    def evaluate(self, rule: RuleList, student_courses: list[StudentCourse]) -> Result:
+        adapter = TypeAdapter(Result)
+        result = adapter.validate_python(
+            {
+                "result_type": RuleTypeEnum.RULE_LIST,
+                "name": rule.name,
+                "description": rule.description,
+                "total_required_courses": rule.course_list,
+            }
+        )
+        matched_courses: list[ResultCourse] = []
+
+        for course in rule.course_list:
+            matching_courses: list[StudentCourse] = []
+            for student_course in student_courses:
+                if not student_course.recognized:
+                    if student_course.course_name == course.course_name:
+                        matching_courses.append(student_course)
+
+            if not matching_courses:
+                matched_courses.append(
+                    ResultCourse(
+                        course_name=course.course_name,
+                        course_codes=course.course_codes,
+                        credit=course.credit,
+                        course_type=course.course_type,
+                        tag=course.tag,
+                        status="未修課",
+                        year_taken=0,
+                        semester_taken=0,
+                    )
+                )
+                continue
+
+            for student_course in matching_courses:
+                if GradeUtils.is_grade_acceptable(student_course, rule.requirement):
+                    matched_courses.append(
+                        ResultCourse(
+                            year_taken=student_course.year_taken,
+                            semester_taken=student_course.semester_taken,
+                        )
+                    )
+                    student_course.recognized = True
+                    break
+        return GradeUtils.apply_requirement(rule.requirement, matched_courses, result)
+
+
+@register_evaluator(RuleTypeEnum.RULE_CRITERIA)
+class RuleCriteriaEvaluator:
+    def evaluate(
+        self, rule: RuleCriteria, student_courses: list[StudentCourse]
+    ) -> Result:
+        adapter = TypeAdapter(Result)
+        result = adapter.validate_python(
+            {
+                "result_type": RuleTypeEnum.RULE_CRITERIA,
+                "name": rule.name,
+                "description": rule.description,
+            }
+        )
+        matched_courses = []
+
+        for student_course in student_courses:
+            if not student_course.recognized:
+                if GradeUtils.match_criteria(student_course, rule.course_criteria):
+                    if GradeUtils.is_grade_acceptable(student_course, rule.requirement):
+                        matched_courses.append(student_course)
+                        student_course.recognized = True
+        return GradeUtils.apply_requirement(rule.requirement, matched_courses, result)
+
+
+class Evaluator:
+    def __init__(self):
+        self.registry = evaluator_registry
+
+    def evaluate(
+        self, graduation_rule: GraduationRule, student_courses: list[StudentCourse]
+    ) -> list[Result]:
+        results: list[Result] = []
+
+        for rule in graduation_rule.rules:
+            try:
+                evaluator = self.registry.create_evaluator(rule.rule_type)
+                result = evaluator.evaluate(rule, student_courses)
+                results.append(result)
+            except Exception as e:
+                raise TypeError(f"未知的規則類型：{rule.rule_type}") from e
+        return results
+
+
+'''
+class RuleEvaluator(Protocol):
+    @abstractmethod
+    def evaluate(
+        self, rule: Rule, student_courses: list[StudentCourse], **kwargs
     ) -> EvaluationResult: ...
 
 
@@ -57,7 +206,7 @@ def register_evaluator(rule_type: str):
 @register_evaluator("list_selected")
 class ListSelectedEvaluator:
     def evaluate(
-        self, rule: ListSelectedRule, student_courses: list[StudentCourse]
+        self, rule: ListSelectedRule, student_courses: list[StudentCourse], **kwargs
     ) -> EvaluationResult:
         result = EvaluationResult(course_list=[])
         course_count = 0
@@ -65,7 +214,9 @@ class ListSelectedEvaluator:
             for student_course in student_courses:
                 if not student_course.recognized:
                     if CourseMatcher.match(
-                        student_course, course, CourseMatcher.STRICT
+                        student_course,
+                        course,
+                        MatchConfig(),
                     ):
                         result.earned_credits += course.credit
                         course_count += 1
@@ -87,12 +238,10 @@ class ListSelectedEvaluator:
 @register_evaluator("required")
 class RequiredEvaluator:
     def evaluate(
-        self,
-        rule: RequiredRule,
-        student_courses: list[StudentCourse],
-        context: dict | None = None,
+        self, rule: RequiredRule, student_courses: list[StudentCourse], **kwargs
     ) -> EvaluationResult:
         result = EvaluationResult()
+        department_code = kwargs.get("major", "")
 
         for course in rule.course_list:
             resultCourse = ResultCourse(
@@ -110,8 +259,12 @@ class RequiredEvaluator:
             for student_course in student_courses:
                 if not student_course.recognized:
                     if CourseMatcher.match(
-                        student_course, course, CourseMatcher.STRICT
-                    ) and self._is_passing_grade(student_course.grade):
+                        student_course,
+                        course,
+                        MatchConfig(
+                            dept_code=department_code,
+                        ),
+                    ) and GradeUtils.is_passing_grade(student_course.grade):
                         result.earned_credits += course.credit
                         student_course.recognized = True
                         found = True
@@ -129,7 +282,7 @@ class RequiredEvaluator:
             # 第二階段：外系同名課程
             if not found and rule.allow_external_substitute_after_fail:
                 failed_dept_course = self._find_failed_department_course(
-                    course, student_courses
+                    course, student_courses, department_code
                 )
                 if failed_dept_course:
                     external_course = self._find_external_substitute(
@@ -150,19 +303,17 @@ class RequiredEvaluator:
 
         return result
 
-    def _is_passing_grade(self, grade: int) -> bool:
-        """檢查成績是否通過"""
-        return 60 <= grade <= 100 or grade in (555, 999)
-
     def _find_failed_department_course(
-        self, course: Course, student_courses: list[StudentCourse]
+        self, course: Course, student_courses: list[StudentCourse], dept_code: str
     ) -> StudentCourse | None:
         """尋找本系失敗的課程"""
         for student_course in student_courses:
             # 嚴格匹配本系課程且成績未通過
             if CourseMatcher.match(
-                student_course, course, CourseMatcher.STRICT
-            ) and not self._is_passing_grade(student_course.grade):
+                student_course,
+                course,
+                MatchConfig(dept_code=dept_code),
+            ) and not GradeUtils.is_passing_grade(student_course.grade):
                 return student_course
         return None
 
@@ -179,12 +330,19 @@ class RequiredEvaluator:
 
             # 同名但非本系課程（使用 NAME_ONLY 模式）
             if (
-                CourseMatcher.match(student_course, course, CourseMatcher.NAME_ONLY)
+                CourseMatcher.match(
+                    student_course,
+                    course,
+                    MatchConfig(
+                        mode=MatchMode.NAME,
+                        learn_in_dept=False,
+                    ),
+                )
                 and student_course.course_code not in course.course_codes
-                and self._is_passing_grade(student_course.grade)
+                and GradeUtils.is_passing_grade(student_course.grade)
             ):
 
-                # 檢查時間順序：必須晚於失敗的本系課程
+                # 檢查時間順序：必須晚於被當的本系課程
                 if self._is_later_than(student_course, failed_course):
                     return student_course
 
@@ -205,21 +363,22 @@ class RequiredEvaluator:
 @register_evaluator("selected")
 class SelectedEvaluator:
     def evaluate(
-        self, rule: SelectedRule, student_courses: list[StudentCourse]
+        self, rule: SelectedRule, student_courses: list[StudentCourse], **kwargs
     ) -> EvaluationResult:
         result = EvaluationResult()
         return result
 
-    def _evaluate_prerequisite(
+
+@register_evaluator("prerequisite")
+class PrerequisiteEvaluator:
+    def evaluate(
         self, rule: PrerequisiteRule, student_courses: list[StudentCourse]
     ) -> EvaluationResult:
         result = EvaluationResult(course_list=[])
         for course in rule.course_list:
             for student_course in student_courses:
                 if not student_course.recognized:
-                    if CourseMatcher.match(
-                        student_course, course, CourseMatcher.STRICT
-                    ):
+                    if CourseMatcher.match(student_course, course, MatchConfig()):
                         student_course.recognized = True
                         break
             result.is_valid = False
@@ -236,9 +395,7 @@ class CorrespondingEvaluator:
         for course in rule.course_list:
             for student_course in student_courses:
                 if not student_course.recognized:
-                    if CourseMatcher.match(
-                        student_course, course, CourseMatcher.STRICT
-                    ):
+                    if CourseMatcher.match(student_course, course, MatchConfig()):
                         student_course.recognized = True
                         result.earned_credits += course.credit
                         break
@@ -251,12 +408,12 @@ class AnySelectedEvaluator:
         self,
         rule: AnySelectedRule,
         student_courses: list[StudentCourse],
-        department_code: str,
     ) -> EvaluationResult:
         result = EvaluationResult(course_list=[])
         course_count = 0
         if rule.learn_in_dept:
             for student_course in student_courses:
+                department_code = "12"
                 if (
                     student_course.course_code[0:2] == department_code
                     and student_course.course_type == 2
@@ -312,12 +469,9 @@ class Evaluator:
         for rule in graduation_rule.rules:
             try:
                 evaluator = self.registry.create_evaluator(rule.rule_type)
-                context = {
-                    "department_code": graduation_rule.department_code,
-                    "previous_results": results if rule.rule_type == "final" else None,
-                }
-                result = evaluator.evaluate(rule, student_courses, context)
+                result = evaluator.evaluate(rule, student_courses)
                 results.append(result)
             except ValueError as e:
                 raise TypeError(f"未知的規則類型：{rule.rule_type}") from e
         return results
+'''

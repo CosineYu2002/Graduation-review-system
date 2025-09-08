@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field, field_validator
-from rule_engine.models.rule import Rule
+from rule import Rule
 
 
 class GraduationRule(BaseModel):

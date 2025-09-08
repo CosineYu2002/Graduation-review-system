@@ -1,6 +1,7 @@
 from .models.course import Course, StudentCourse
+from .models.student import StudentType
 from enum import Enum
-from dataclasses import dataclass
+from pydantic import BaseModel, Field, ConfigDict
 
 
 class MatchMode(Enum):
@@ -10,27 +11,37 @@ class MatchMode(Enum):
     EITHER = "either"
 
 
-@dataclass(frozen=True, slots=True)
-class MatchConfig:
-    mode: MatchMode = MatchMode.BOTH
-    dept_only: bool = False
-    dept_code: str | None = None
-    course_types: frozenset[int] = frozenset()
-    categories: frozenset[str] = frozenset()
+class MatchConfig(BaseModel):
+    model_config = ConfigDict(frozen=True, arbitrary_types_allowed=True)
+
+    mode: MatchMode = Field(default=MatchMode.BOTH, description="匹配模式")
+    learn_in_dept: bool = Field(default=True, description="是否僅限於系所課程")
+    dept_code: str = Field(default="", description="學生系所代碼")
+    substitute_dept_codes: list[str] | None = Field(
+        default=None, description="如果承認外系課程，則填寫系所代碼"
+    )
+    course_types: frozenset[int] = Field(
+        default_factory=frozenset, description="可接受的選必修類別"
+    )
+    categories: frozenset[str] = Field(
+        default_factory=frozenset, description="可接受的承抵課程類別"
+    )
 
 
 class CourseMatcher:
-    STRICT = MatchConfig(MatchMode.BOTH)
-    NAME_ONLY = MatchConfig(MatchMode.NAME)
-    CODE_ONLY = MatchConfig(MatchMode.CODE)
-    EITHER = MatchConfig(MatchMode.EITHER)
-
     @staticmethod
     def match(
         student_course: StudentCourse, course: Course, config: MatchConfig
     ) -> bool:
-        if config.dept_only and config.dept_code:
+        if config.learn_in_dept:
             if not student_course.course_code.startswith(config.dept_code):
+                return False
+
+        if config.substitute_dept_codes:
+            if not any(
+                student_course.course_code.startswith(dept_code)
+                for dept_code in (config.substitute_dept_codes or [])
+            ) and not student_course.course_code.startswith(config.dept_code):
                 return False
 
         if (
@@ -47,42 +58,9 @@ class CourseMatcher:
 
 _MATCH_STRATEGIES = {
     MatchMode.NAME: lambda sc, c: sc.course_name == c.course_name,
-    MatchMode.CODE: lambda sc, c: sc.course_code in c.course_code,
+    MatchMode.CODE: lambda sc, c: sc.course_code in c.course_codes,
     MatchMode.BOTH: lambda sc, c: sc.course_name == c.course_name
-    and sc.course_code in c.course_code,
+    and sc.course_code in c.course_codes,
     MatchMode.EITHER: lambda sc, c: sc.course_name == c.course_name
-    or sc.course_code in c.course_code,
+    or sc.course_code in c.course_codes,
 }
-
-
-class Configs:
-    """
-    Configuration options for course matching.
-    """
-
-    @staticmethod
-    def dept(dept_code: str, mode: MatchMode = MatchMode.CODE) -> MatchConfig:
-        return MatchConfig(mode, True, dept_code)
-
-    @staticmethod
-    def types(*course_types: int, mode: MatchMode = MatchMode.BOTH) -> MatchConfig:
-        return MatchConfig(mode, course_types=frozenset(course_types))
-
-    @staticmethod
-    def categories(*categories: str, mode: MatchMode = MatchMode.BOTH) -> MatchConfig:
-        return MatchConfig(mode, categories=frozenset(categories))
-
-    @staticmethod
-    def custom(
-        mode: MatchMode = MatchMode.BOTH,
-        dept_code: str = "",
-        course_types: tuple[int, ...] = (),
-        categories: tuple[str, ...] = (),
-    ) -> MatchConfig:
-        return MatchConfig(
-            mode,
-            bool(dept_code),
-            dept_code,
-            frozenset(course_types),
-            frozenset(categories),
-        )
