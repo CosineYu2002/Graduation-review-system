@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import Literal, Annotated, Union
-from rule_engine.models.course import ResultCourse
+from rule_engine.models.course import BaseCourse, ResultCourse
 from rule_engine.models.rule import RuleTypeEnum
 
 
@@ -21,24 +21,16 @@ class SetResult(BaseEvaluationResult):
     sub_rule_logic: Literal["AND", "OR"] = Field("AND", description="子規則邏輯關係")
 
 
-class ListResult(BaseEvaluationResult):
-    result_type: Literal[RuleTypeEnum.RULE_LIST] = Field(
-        RuleTypeEnum.RULE_LIST, description="結果類型"
+class AllResult(BaseEvaluationResult):
+    result_type: Literal[RuleTypeEnum.RULE_ALL] = Field(
+        RuleTypeEnum.RULE_ALL, description="結果類型"
     )
-    course_list: list[ResultCourse] = Field(
+    finished_course_list: list[ResultCourse] = Field(
         default_factory=list, description="符合規則的課程列表"
     )
-
-
-class CriteriaResult(BaseEvaluationResult):
-    result_type: Literal[RuleTypeEnum.RULE_CRITERIA] = Field(
-        RuleTypeEnum.RULE_CRITERIA, description="結果類型"
-    )
-    course_list: list[ResultCourse] = Field(
-        default_factory=list, description="符合規則的課程列表"
+    required_course_list: list[BaseCourse] | None = Field(
+        None, description="規則要求的課程列表"
     )
 
 
-Result = Annotated[
-    Union[SetResult, ListResult, CriteriaResult], Field(discriminator="result_type")
-]
+Result = Annotated[Union[SetResult, AllResult], Field(discriminator="result_type")]

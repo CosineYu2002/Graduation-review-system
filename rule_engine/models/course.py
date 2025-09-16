@@ -74,8 +74,6 @@ class StudentCourse(BaseCourse):
 
 
 class ResultCourse(BaseCourse):
-    status: Literal["通過", "修課中", "未修課", "外系替代", "抵免"] = Field(
-        ..., description="修課狀態"
-    )
+    status: str = Field(..., description="修課狀態")
     year_taken: int = Field(..., description="修課學年")
     semester_taken: Literal[0, 1, 2] = Field(..., description="修課學期")
