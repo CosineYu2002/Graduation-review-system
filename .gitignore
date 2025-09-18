@@ -10,4 +10,6 @@ rule_updater/__pycache__/
 rule_engine/__pycache__/
 rule_engine/models/__pycache__/
 crawler/__pycache__/
-tests/__pycache__/
+tests/unit/rule_engine/__pycache__/
+evaluation_results/
+__pycache__/

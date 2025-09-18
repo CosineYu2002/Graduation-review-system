@@ -1,13 +1,15 @@
 from pydantic import BaseModel, Field, field_validator
-from typing import Literal
+from typing import Literal, Annotated
 
 
 class BaseCourse(BaseModel):
-    course_name: str = Field(..., min_length=1, description="課程名稱")
-    course_codes: list[str] = Field(..., min_length=1, description="課程代碼列表")
-    credit: float = Field(..., ge=0, description="學分數")
-    course_type: int = Field(..., description="選必修")
-    tag: list[str] = Field(default_factory=list, description="課程標籤")
+    course_name: Annotated[str, Field(..., min_length=1, description="課程名稱")]
+    course_codes: Annotated[
+        list[str], Field(..., min_length=1, description="課程代碼列表")
+    ]
+    credit: Annotated[float, Field(..., ge=0, description="學分數")]
+    course_type: Annotated[int, Field(..., description="選必修")]
+    tag: Annotated[list[str], Field(default_factory=list, description="課程標籤")]
 
     @field_validator("course_name", mode="after")
     @classmethod
@@ -32,11 +34,13 @@ class BaseCourse(BaseModel):
 
 
 class StudentCourse(BaseCourse):
-    grade: int = Field(..., description="成績")
-    category: str = Field(..., min_length=1, max_length=1, description="承抵課程類別")
-    year_taken: int = Field(..., description="修課學年")
-    semester_taken: Literal[0, 1, 2] = Field(..., description="修課學期")
-    recognized: bool = Field(default=False, description="是否檢查過")
+    grade: Annotated[int, Field(..., description="成績")]
+    category: Annotated[
+        str, Field(..., min_length=1, max_length=1, description="承抵課程類別")
+    ]
+    year_taken: Annotated[int, Field(..., description="修課學年")]
+    semester_taken: Annotated[Literal[0, 1, 2], Field(..., description="修課學期")]
+    recognized: Annotated[bool, Field(False, description="是否檢查過")]
 
     @field_validator("grade", mode="after")
     @classmethod
@@ -74,6 +78,6 @@ class StudentCourse(BaseCourse):
 
 
 class ResultCourse(BaseCourse):
-    status: str = Field(..., description="修課狀態")
-    year_taken: int = Field(..., description="修課學年")
-    semester_taken: Literal[0, 1, 2] = Field(..., description="修課學期")
+    status: Annotated[str, Field(..., description="修課狀態")]
+    year_taken: Annotated[int, Field(..., description="修課學年")]
+    semester_taken: Annotated[Literal[0, 1, 2], Field(..., description="修課學期")]

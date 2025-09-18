@@ -1,11 +1,10 @@
-from typing import Any
 import re
-from rule_engine.models.course import BaseCourse, StudentCourse, ResultCourse
+from rule_engine.models.course import StudentCourse
 from rule_engine.models.rule import *
-from rule_engine.models.result import Result, SetResult, AllResult
+from rule_engine.models.result import Result, AllResult
 
 
-class GradeUtils:
+class UtilFunctions:
     @staticmethod
     def get_status(grade: int) -> str:
         if grade == 999:
@@ -115,21 +114,21 @@ class GradeUtils:
                 result.is_valid = total_courses == len(rule.course_list)
                 result.earned_credits = total_credits
             case RequirementType.MIN_CREDITS:
-                result.is_valid = total_credits >= (rule.requirement.mincredits or 0)
+                result.is_valid = total_credits >= (rule.requirement.min_credits or 0)
                 result.earned_credits = total_credits
             case RequirementType.MAX_CREDITS:
                 result.is_valid = True
-                if total_credits > (rule.requirement.maxcredits or float("inf")):
-                    result.earned_credits = rule.requirement.maxcredits or 0
+                if total_credits > (rule.requirement.max_credits or float("inf")):
+                    result.earned_credits = rule.requirement.max_credits or 0
                 else:
                     result.earned_credits = total_credits
             case RequirementType.MIN_COURSES:
-                result.is_valid = total_courses >= (rule.requirement.mincourses or 0)
+                result.is_valid = total_courses >= (rule.requirement.min_courses or 0)
                 result.earned_credits = total_credits
             case RequirementType.MAX_COURSES:
                 result.is_valid = True
-                if total_courses > (rule.requirement.maxcourses or float("inf")):
-                    result.earned_credits = rule.requirement.maxcourses or 0
+                if total_courses > (rule.requirement.max_courses or float("inf")):
+                    result.earned_credits = rule.requirement.max_courses or 0
                 else:
                     result.earned_credits = total_credits
             case RequirementType.PREREQUISITE:
@@ -139,21 +138,49 @@ class GradeUtils:
                 result.earned_credits = 0.0
             case RequirementType.CREDIT_RANGE:
                 if (
-                    rule.requirement.mincredits is not None
-                    and rule.requirement.maxcredits is not None
+                    rule.requirement.min_credits is not None
+                    and rule.requirement.max_credits is not None
                 ):
                     result.is_valid = (
-                        rule.requirement.mincredits
+                        rule.requirement.min_credits
                         <= total_credits
-                        <= rule.requirement.maxcredits
+                        <= rule.requirement.max_credits
                     )
                     result.earned_credits = min(
-                        max(total_credits, rule.requirement.mincredits),
-                        rule.requirement.maxcredits,
+                        max(total_credits, rule.requirement.min_credits),
+                        rule.requirement.max_credits,
                     )
                 else:
                     raise ValueError(
-                        "學分區間需求需要同時指定 mincredits 與 maxcredits"
+                        "學分區間需求需要同時指定 min_credits 與 max_credits"
                     )
             case _:
-                raise ValueError(f"未知的需求類型: {requirement.type}")
+                raise ValueError(f"未知的需求類型: {rule.requirement.type}")
+
+    def get_department_code(self, department_code: str) -> list[str]:
+        from pathlib import Path
+        import json
+
+        department_info_path = Path("data/departments_info.json")
+        if not department_info_path.exists():
+            raise FileNotFoundError("找不到 departments_info.json 檔案")
+        try:
+            department_info = json.loads(
+                department_info_path.read_text(encoding="utf-8")
+            )
+        except json.JSONDecodeError:
+            raise ValueError("departments_info.json 檔案格式錯誤")
+        except Exception as e:
+            raise IOError(f"讀取 departments_info.json 檔案時發生錯誤: {e}")
+
+        college = department_info[department_code].get("college")
+
+        department_codes: list[str] = []
+        for dept_code, dept_info in department_info.items():
+            if dept_info.get("college") == college:
+                department_codes.append(dept_code)
+
+        if not department_codes:
+            raise ValueError(f"找不到對應學院 {college} 的系所")
+
+        return department_codes

@@ -1,0 +1,49 @@
+{
+    "name": "專長養成課程",
+    "description": "需於本校某一學院修習50學分以上且滿足該學院某一學系之輔系標準",
+    "priority": 0,
+    "rule_type": "rule_set",
+    "Sub_rule_logic": "AND",
+    "requirement": {
+        "type": "min_credits",
+        "min_credits": 50,
+        "pass_or_none": false
+    },
+    "sub_rules": [
+        {
+            "name": "輔系",
+            "description": "某一系的輔系規則",
+            "priority": 0,
+            "rule_type": "rule_set",
+            "requirement": {
+                "type": "meaningless"
+            }
+        },
+        {
+            "name": "學院課程",
+            "description": "需於本校某一學院修習50學分以上",
+            "priority": 1,
+            "rule_type": "rule_all",
+            "requirement": {
+                "type": "min_credits",
+                "min_credits": 1
+            },
+            "course_criteria": {}
+        },
+        {
+            "name": "coursera限制",
+            "description": "coursera課程最多承認9學分",
+            "priority": 2,
+            "rule_type": "rule_all",
+            "requirement": {
+                "type": "max_credits",
+                "max_credits": 9
+            },
+            "course_criteria": {
+                "tags": [
+                    "coursera"
+                ]
+            }
+        }
+    ]
+}
