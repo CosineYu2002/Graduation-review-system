@@ -1,52 +1,28 @@
-from __future__ import annotations
-from dataclasses import dataclass, field
+from pydantic import BaseModel, Field, field_validator, computed_field
 from rule_engine.models.course import StudentCourse
-from pathlib import Path
-import json
+from enum import Enum
+from typing import Annotated
 
 
-@dataclass
-class Student:
-    name: str
-    id: str
-    courses: list[StudentCourse] = field(default_factory=list)
-    major: str = ""
+class Student(BaseModel):
+    name: Annotated[str, Field(..., min_length=1, description="學生姓名", frozen=True)]
+    id: Annotated[
+        str,
+        Field(..., pattern="^[A-Z][A-Z0-9][0-9]{7}$", description="學號", frozen=True),
+    ]
+    major: Annotated[str, Field(..., min_length=1, description="主修科系")]
+    courses: Annotated[
+        list[StudentCourse], Field(default_factory=list, description="修課列表")
+    ]
 
-    def __post_init__(self):
-        if not self.name:
-            raise ValueError("學生姓名不能為空")
-        if not self.id:
-            raise ValueError("學生ID不能為空")
-        if not isinstance(self.courses, list):
-            raise TypeError("課程必須是列表類型")
-        for c in self.courses:
-            if not isinstance(c, StudentCourse):
-                raise TypeError("課程列表中的項目必須是 StudentCourse 類型")
-
+    @field_validator("name", mode="after")
     @classmethod
-    def from_dict(cls, student_data: dict) -> Student:
-        courses = []
-        for course_data in student_data.get("courses", []):
-            course = StudentCourse(
-                course_name=course_data["course_name"],
-                credits=course_data["credit"],
-                grade=course_data["grade"],
-                course_code=course_data["course_code"],
-                category=course_data["category"],
-                course_type=course_data["course_type"],
-            )
-            courses.append(course)
-        return cls(name=student_data["name"], id=student_data["id"], courses=courses)
+    def validate_name(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("姓名不能為空")
+        return v.strip()
 
-    @classmethod
-    def from_json(cls, json_file_path: Path) -> Student:
-        if not json_file_path.exists():
-            raise FileNotFoundError(f"找不到學生檔案: {json_file_path}")
-
-        try:
-            data = json.loads(json_file_path.read_text(encoding="utf-8"))
-            return cls.from_dict(data)
-        except json.JSONDecodeError as e:
-            raise ValueError(f"錯誤的 JSON 格式：{e}，路徑：{json_file_path}")
-        except Exception as e:
-            raise RuntimeError(f"讀取學生檔案時發生錯誤：{e}，路徑：{json_file_path}")
+    @computed_field
+    @property
+    def admission_year(self) -> int:
+        return int(self.id[3:5]) + 100

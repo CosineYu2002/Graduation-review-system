@@ -1,166 +1,207 @@
 {
     "B1": {
         "name_zh_tw": "中國文學系學士班",
-        "name_en": "Department of Chinese Literature, Bachelor Program"
+        "name_en": "Department of Chinese Literature, Bachelor Program",
+        "college": "文學院"
     },
     "B2": {
         "name_zh_tw": "外國語文學系學士班",
-        "name_en": "Department of Foreign Languages and Literatures, Bachelor Program"
+        "name_en": "Department of Foreign Languages and Literatures, Bachelor Program",
+        "college": "文學院"
     },
     "B3": {
         "name_zh_tw": "歷史學系學士班",
-        "name_en": "Department of History, Bachelor Program"
+        "name_en": "Department of History, Bachelor Program",
+        "college": "文學院"
     },
     "B5": {
         "name_zh_tw": "台灣文學系學士班",
-        "name_en": "Department of Taiwanese Literature, Bachelor Program"
+        "name_en": "Department of Taiwanese Literature, Bachelor Program",
+        "college": "文學院"
     },
     "D4": {
         "name_zh_tw": "政治學系學士班",
-        "name_en": "Department of Political Science, Bachelor Program"
+        "name_en": "Department of Political Science, Bachelor Program",
+        "college": "社會科學院"
     },
     "D5": {
         "name_zh_tw": "經濟學系學士班",
-        "name_en": "Department of Economics, Bachelor Program"
+        "name_en": "Department of Economics, Bachelor Program",
+        "college": "社會科學院"
     },
     "D8": {
         "name_zh_tw": "心理學系學士班",
-        "name_en": "Department of Psychology, Bachelor Program"
+        "name_en": "Department of Psychology, Bachelor Program",
+        "college": "社會科學院"
     },
     "H1": {
         "name_zh_tw": "會計學系學士班",
-        "name_en": "Department of Accountancy and Institute of Finance, Bachelor Program"
+        "name_en": "Department of Accountancy and Institute of Finance, Bachelor Program",
+        "college": "管理學院"
     },
     "H2": {
         "name_zh_tw": "統計學系學士班",
-        "name_en": "Department of Statistics, Bachelor Program"
+        "name_en": "Department of Statistics, Bachelor Program",
+        "college": "管理學院"
     },
     "H3": {
         "name_zh_tw": "工業與資訊管理學系學士班",
-        "name_en": "Department of Industrial and Information Management, Bachelor Program"
+        "name_en": "Department of Industrial and Information Management, Bachelor Program",
+        "college": "管理學院"
     },
     "H4": {
         "name_zh_tw": "企業管理學系學士班",
-        "name_en": "Department of Business Administration, Bachelor Program"
+        "name_en": "Department of Business Administration, Bachelor Program",
+        "college": "管理學院"
     },
     "H5": {
         "name_zh_tw": "交通管理學系學士班",
-        "name_en": "Department of Transportation and Communication Management, Bachelor Program"
+        "name_en": "Department of Transportation and Communication Management, Bachelor Program",
+        "college": "管理學院"
     },
     "C1": {
         "name_zh_tw": "數學系學士班",
-        "name_en": "Department of Mathematics, Bachelor Program"
+        "name_en": "Department of Mathematics, Bachelor Program",
+        "college": "理學院"
     },
     "C2": {
         "name_zh_tw": "物理系學士班",
-        "name_en": "Department of Physics, Bachelor Program"
+        "name_en": "Department of Physics, Bachelor Program",
+        "college": "理學院"
     },
     "C3": {
         "name_zh_tw": "化學系學士班",
-        "name_en": "Department of Chemistry, Bachelor Program"
+        "name_en": "Department of Chemistry, Bachelor Program",
+        "college": "理學院"
     },
     "C4": {
         "name_zh_tw": "地球科學系學士班",
-        "name_en": "Department of Earth Sciences, Bachelor Program"
+        "name_en": "Department of Earth Sciences, Bachelor Program",
+        "college": "理學院"
     },
     "F8": {
         "name_zh_tw": "光電科學與工程學系學士班",
-        "name_en": "Department of Photonics, Bachelor Program"
+        "name_en": "Department of Photonics, Bachelor Program",
+        "college": "理學院"
     },
     "E1": {
         "name_zh_tw": "機械工程學系學士班",
-        "name_en": "Department of Mechanical Engineering, Bachelor Program"
+        "name_en": "Department of Mechanical Engineering, Bachelor Program",
+        "college": "工學院"
     },
     "E3": {
         "name_zh_tw": "化學工程學系學士班",
-        "name_en": "Department of Chemical Engineering, Bachelor Program"
+        "name_en": "Department of Chemical Engineering, Bachelor Program",
+        "college": "工學院"
     },
     "E4": {
         "name_zh_tw": "資源工程學系學士班",
-        "name_en": "Department of Resource Engineering, Bachelor Program"
+        "name_en": "Department of Resource Engineering, Bachelor Program",
+        "college": "工學院"
     },
     "E5": {
         "name_zh_tw": "材料科學及工程學系學士班",
-        "name_en": "Department of Materials Science and Engineering, Bachelor Program"
+        "name_en": "Department of Materials Science and Engineering, Bachelor Program",
+        "college": "工學院"
     },
     "E6": {
         "name_zh_tw": "土木工程學系學士班",
-        "name_en": "Department of Civil Engineering, Bachelor Program"
+        "name_en": "Department of Civil Engineering, Bachelor Program",
+        "college": "工學院"
     },
     "E8": {
         "name_zh_tw": "水利及海洋工程學系學士班",
-        "name_en": "Department of Hydraulic and Ocean Engineering, Bachelor Program"
+        "name_en": "Department of Hydraulic and Ocean Engineering, Bachelor Program",
+        "college": "工學院"
     },
     "E9": {
         "name_zh_tw": "工程科學系學士班",
-        "name_en": "Department of Engineering Science, Bachelor Program"
+        "name_en": "Department of Engineering Science, Bachelor Program",
+        "college": "工學院"
     },
     "F0": {
         "name_zh_tw": "能源工程國際學士學位學程學士班",
-        "name_en": "International Bachelor Degree Program on Energy Engineering"
+        "name_en": "International Bachelor Degree Program on Energy Engineering",
+        "college": "工學院"
     },
     "F1": {
         "name_zh_tw": "系統及船舶機電工程學系學士班",
-        "name_en": "Department of Systems and Naval Mechatronic Engineering, Bachelor Program"
+        "name_en": "Department of Systems and Naval Mechatronic Engineering, Bachelor Program",
+        "college": "工學院"
     },
     "F4": {
         "name_zh_tw": "航空太空工程學系學士班",
-        "name_en": "Department of Aeronautics and Astronautics, Bachelor Program"
+        "name_en": "Department of Aeronautics and Astronautics, Bachelor Program",
+        "college": "工學院"
     },
     "F5": {
         "name_zh_tw": "環境工程學系學士班",
-        "name_en": "Department of Environmental Engineering, Bachelor Program"
+        "name_en": "Department of Environmental Engineering, Bachelor Program",
+        "college": "工學院"
     },
     "F6": {
         "name_zh_tw": "測量及空間資訊學系學士班",
-        "name_en": "Department of Geomatics, Bachelor Program"
+        "name_en": "Department of Geomatics, Bachelor Program",
+        "college": "工學院"
     },
     "F9": {
         "name_zh_tw": "生物醫學及工程學系學士班",
-        "name_en": "Department of Biomedical Engineering, Bachelor Program"
+        "name_en": "Department of Biomedical Engineering, Bachelor Program",
+        "college": "工學院"
     },
     "E2": {
         "name_zh_tw": "電機工程學系學士班",
-        "name_en": "Department of Electrical Engineering, Bachelor Program"
+        "name_en": "Department of Electrical Engineering, Bachelor Program",
+        "college": "電機資訊學院"
     },
     "F7": {
         "name_zh_tw": "資訊工程學系學士班",
-        "name_en": "Department of Computer Science and Information Engineering, Bachelor Program"
+        "name_en": "Department of Computer Science and Information Engineering, Bachelor Program",
+        "college": "電機資訊學院"
     },
     "C5": {
         "name_zh_tw": "生命科學系學士班",
-        "name_en": "Department of Life Sciences, Bachelor Program"
+        "name_en": "Department of Life Sciences, Bachelor Program",
+        "college": "生物科學與科技學院"
     },
     "C6": {
         "name_zh_tw": "生物科技與產業科學系學士班",
-        "name_en": "Department of Biotechnology and Bioindustry Sciences, Bachelor Program"
+        "name_en": "Department of Biotechnology and Bioindustry Sciences, Bachelor Program",
+        "college": "生物科學與科技學院"
     },
     "F2": {
         "name_zh_tw": "都市計劃學系學士班",
-        "name_en": "Department of Urban Planning, Bachelor Program"
+        "name_en": "Department of Urban Planning, Bachelor Program",
+        "college": "規劃設計學院"
     },
     "F3": {
         "name_zh_tw": "工業設計學系學士班",
-        "name_en": "Department of Industrial Design, Bachelor Program"
+        "name_en": "Department of Industrial Design, Bachelor Program",
+        "college": "規劃設計學院"
     },
     "N2": {
         "name_zh_tw": "電機工程學系碩士班",
-        "name_en": "Department of Electrical Engineering, Master Program"
+        "name_en": "Department of Electrical Engineering, Master Program",
+        "college": "電機資訊學院"
     },
     "Q1": {
         "name_zh_tw": "微電子工程研究所",
-        "name_en": "Institute of Microelectronics"
+        "name_en": "Institute of Microelectronics",
+        "college": "電機資訊學院"
     },
     "Q3": {
         "name_zh_tw": "電腦與通信工程研究所",
-        "name_en": "Institute of Computer and Communication Engineering"
+        "name_en": "Institute of Computer and Communication Engineering",
+        "college": "電機資訊學院"
     },
     "Q7": {
         "name_zh_tw": "奈米積體電路工程碩士學位學程",
-        "name_en": "M.S. Degree Program on Nano-IC Engineering"
+        "name_en": "M.S. Degree Program on Nano-IC Engineering",
+        "college": "電機資訊學院"
     },
-    "NQ":{
-        "name_zh_tw":"智慧資訊安全碩士學位學程",
-        "name_en":"M.S. Degree Program on Cyber-Security Intelligence"
+    "NQ": {
+        "name_zh_tw": "智慧資訊安全碩士學位學程",
+        "name_en": "M.S. Degree Program on Cyber-Security Intelligence",
+        "college": "電機資訊學院"
     }
 }
