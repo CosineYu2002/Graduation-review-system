@@ -1,8 +1,23 @@
 import sys
+import argparse
 from cli import GraduationSystemCLI
 
 
 def main():
+    parser = argparse.ArgumentParser(description="畢業審查系統")
+    parser.add_argument("--gui", action="store_true", help="啟動圖形界面")
+    args = parser.parse_args()
+
+    if args.gui:
+        try:
+            from gui.app import run_gui
+
+            run_gui()
+        except Exception as e:
+            print(f"❌ GUI 啟動失敗：{e}")
+            sys.exit(1)
+        return
+
     cli = GraduationSystemCLI()
     try:
         cli.run()
