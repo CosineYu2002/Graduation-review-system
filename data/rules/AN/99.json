@@ -6,7 +6,7 @@
     "Sub_rule_logic": "AND",
     "requirement": {
         "type": "min_credits",
-        "min_credits": 50,
+        "min_credits": 30,
         "pass_or_none": false
     },
     "sub_rules": [

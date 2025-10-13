@@ -6,32 +6,14 @@
     "sub_rule_logic": "AND",
     "requirement": {
         "type": "min_credits",
-        "min_credits": 23,
+        "min_credits": 12,
         "pass_or_none": false
     },
     "sub_rules": [
         {
             "name": "必修",
-            "description": "語言類別必修兩門",
-            "priority": 1,
-            "rule_type": "rule_all",
-            "requirement": {
-                "type": "min_courses",
-                "min_courses": 2,
-                "pass_or_none": false
-            },
-            "course_criteria": {
-                "course_name_pattern": "^台灣語言基礎及寫作（((台語)|(客語)|(原住民語))）（(一|二)）$",
-                "department_codes": [
-                    "B5"
-                ],
-                "allow_external_substitute_after_fail": false
-            }
-        },
-        {
-            "name": "必修",
             "description": "台灣文學史必修三門",
-            "priority": 2,
+            "priority": 0,
             "rule_type": "rule_all",
             "requirement": {
                 "type": "min_credits",
@@ -48,30 +30,8 @@
         },
         {
             "name": "必修",
-            "description": "文化課必修三選一",
-            "priority": 3,
-            "rule_type": "rule_all",
-            "requirement": {
-                "type": "min_courses",
-                "min_courses": 1,
-                "pass_or_none": false
-            },
-            "course_list": [
-                "台灣歷史與文化",
-                "文化與社會基本議題",
-                "文化研究"
-            ],
-            "course_criteria": {
-                "department_codes": [
-                    "B5"
-                ],
-                "allow_external_substitute_after_fail": false
-            }
-        },
-        {
-            "name": "必修",
             "description": "必修系列二選一",
-            "priority": 4,
+            "priority": 1,
             "rule_type": "rule_set",
             "requirement": {
                 "type": "min_courses",

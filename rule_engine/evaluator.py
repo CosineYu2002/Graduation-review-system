@@ -1,7 +1,6 @@
 from typing import Protocol
 from abc import abstractmethod
 from pydantic import TypeAdapter
-from typing import Any
 from rule_engine.models.course import StudentCourse, ResultCourse
 from rule_engine.models.rule import *
 from rule_engine.exception import *

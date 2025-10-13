@@ -8,15 +8,15 @@ from rule_engine.evaluator import Evaluator
 from rule_engine.utils import UtilFunctions
 from rule_engine.models.student import Student
 from rule_engine.models.rule import *
-from rule_engine.models.result import Result
+from rule_engine.models.result import Result, SetResult, AllResult
 
 
 class GraduationSystemCLI:
     def __init__(self):
         self.students: dict[str, Student] = {}
         self.evaluator = Evaluator()
-        self.students_dir = Path("students")
-        self.rules_dir = Path("rules")
+        self.students_dir = Path("data/students")
+        self.rules_dir = Path("data/rules")
 
     def clear_screen(self):
         """清屏"""
@@ -64,7 +64,7 @@ class GraduationSystemCLI:
             major = input("請輸入主修科系代號（例如，不分系請輸入AN）：").strip()
 
         # 確保輸出目錄存在
-        output_path = Path("students")
+        output_path = Path("data/students")
         output_path.mkdir(parents=True, exist_ok=True)
 
         try:
@@ -266,54 +266,10 @@ class GraduationSystemCLI:
             print(f"❌ 載入規則失敗：{e}")
             return None
 
-    def perform_evaluation(self, student: Student, rule: Rule):
-        """執行畢業審查評估"""
-        print(f"\n--- 執行畢業審查 ---")
-        print(f"學生：{student.name} ({student.id})")
-        print(f"規則：{rule.name}")
-        print()
-
-        try:
-            # 執行評估
-            print("正在進行畢業審查...")
-            result = self.evaluator.evaluate(rule, student.courses)
-
-            # 顯示結果
-            self.display_evaluation_result(student, rule, result)
-
-            # 詢問是否保存結果
-            save_choice = input("\n是否保存審查結果？(y/n)：").strip().lower()
-            if save_choice == "y":
-                self.save_evaluation_result(student, rule, result)
-
-        except Exception as e:
-            print(f"❌ 評估過程中發生錯誤：{e}")
-
-    def display_evaluation_result(self, student: Student, rule: Rule, result: Result):
-        """顯示評估結果"""
-        print("\n" + "=" * 60)
-        print("                畢業審查結果")
-        print("=" * 60)
-
-        print(f"學生姓名：{student.name}")
-        print(f"學    號：{student.id}")
-        print(f"主修科系：{student.major}")
-        print(f"審查規則：{rule.name}")
-        print()
-
-        # 總體結果
-        if result.is_valid:
-            print("🎉 審查結果：通過")
-        else:
-            print("❌ 審查結果：不通過")
-
-        print(f"獲得學分：{result.earned_credits}")
-        print()
-
     def save_evaluation_result(self, student: Student, rule: Rule, result: Result):
         """保存評估結果"""
         try:
-            output_dir = Path("evaluation_results")
+            output_dir = Path("data/evaluation_results")
             output_dir.mkdir(exist_ok=True)
 
             result_file = (
@@ -333,6 +289,236 @@ class GraduationSystemCLI:
 
         except Exception as e:
             print(f"❌ 保存結果失敗：{e}")
+
+    def display_evaluation_result(self, student: Student, rule: Rule, result: Result):
+        print("\n" + "=" * 60)
+        print("                畢業審查結果")
+        print("=" * 60)
+
+        print(f"學生姓名：{student.name}")
+        print(f"學    號：{student.id}")
+        print(f"主修科系：{student.major}")
+        print(f"審查規則：{rule.name}")
+        print()
+
+        # 總體結果
+        if result.is_valid:
+            print("🎉 審查結果：通過")
+        else:
+            print("❌ 審查結果：不通過")
+
+        print(f"獲得學分：{result.earned_credits}")
+        print()
+        self._display_detailed_results(result, level=0)
+
+    def _display_detailed_results(self, result: Result, level: int = 0):
+        indent = "  " * level
+        if result.result_type == "rule_set":
+            print(f"{indent} 規則組：{result.name}")
+            if result.description:
+                print(f"{indent} 描述：{result.description}")
+
+            logic_symbol = "且" if result.sub_rule_logic == "AND" else "或"
+            print(f"{indent} 子規則邏輯：{logic_symbol}({result.sub_rule_logic})")
+            status = "通過" if result.is_valid else "不通過"
+            print(f"{indent} 狀態：{status}")
+            print(f"{indent} 獲得學分：{result.earned_credits}")
+
+            if not result.is_valid:
+                self._analyze_set_failure_reason(result, indent)
+            print()
+            for i, sub_result in enumerate(result.sub_results):
+                print(f"{indent}├─ 子規則 {i+1}:")
+                self._display_detailed_results(sub_result, level + 1)
+        elif result.result_type == "rule_all":
+            print(f"{indent}📚 課程規則：{result.name}")
+            if result.description:
+                print(f"{indent}   描述：{result.description}")
+
+            # 顯示通過狀態
+            status = "✅ 通過" if result.is_valid else "❌ 不通過"
+            print(f"{indent}   狀態：{status}")
+            print(f"{indent}   獲得學分：{result.earned_credits}")
+
+            # 顯示課程詳情
+            if result.finished_course_list:
+                print(
+                    f"{indent}   📖 認證課程 ({len(result.finished_course_list)} 門)："
+                )
+                self._display_course_table(
+                    result.finished_course_list, indent + "     "
+                )
+            else:
+                print(f"{indent}   📖 認證課程：無")
+
+            print()
+
+    def _eaw_display_width(self, s: str, ambiguous_as_double: bool = True) -> int:
+        """計算字串在等寬終端的顯示寬度（考慮中英文/全形/結合符號）。"""
+        import unicodedata as ud
+
+        width = 0
+        for ch in str(s):
+            if ud.combining(ch):  # 結合符不佔寬
+                continue
+            eaw = ud.east_asian_width(ch)
+            if eaw in ("F", "W"):
+                width += 2
+            elif eaw == "A":
+                width += 2 if ambiguous_as_double else 1
+            else:
+                width += 1
+        return width
+
+    def _fit_cell(self, s: str, width: int) -> str:
+        """將字串依顯示寬度截斷並補空格到指定欄寬。"""
+        import unicodedata as ud
+
+        s = "" if s is None else str(s)
+        out = []
+        cur = 0
+        for ch in s:
+            if ud.combining(ch):
+                if out:
+                    out[-1] += ch
+                continue
+            eaw = ud.east_asian_width(ch)
+            w = 2 if eaw in ("F", "W", "A") else 1
+            if cur + w > width:
+                break
+            out.append(ch)
+            cur += w
+        result = "".join(out)
+        pad = width - self._eaw_display_width(result)
+        return result + (" " * pad)
+
+    def _display_course_table(self, courses: list, indent: str = ""):
+        """顯示課程表格（以顯示寬度對齊）。"""
+        if not courses:
+            print(f"{indent}無課程")
+            return
+
+        code_w = 12
+        credit_w = 6
+        semester_w = 8
+
+        # 以顯示寬度計算課程名稱欄寬
+        max_name_w = 0
+        for c in courses:
+            max_name_w = max(max_name_w, self._eaw_display_width(c.course_name))
+        name_w = max(20, min(48, max_name_w + 2))
+
+        # 表頭
+        print(
+            f"{indent}"
+            f"{self._fit_cell('課程代碼', code_w)} "
+            f"{self._fit_cell('課程名稱', name_w)} "
+            f"{self._fit_cell('學分', credit_w)} "
+            f"{self._fit_cell('學期', semester_w)}"
+        )
+        total_w = code_w + 1 + name_w + 1 + credit_w + 1 + semester_w
+        print(f"{indent}{'-' * total_w}")
+
+        # 資料列
+        for c in courses:
+            code = c.course_codes[0] if getattr(c, "course_codes", None) else ""
+            semester = f"{c.year_taken}-{c.semester_taken}"
+            print(
+                f"{indent}"
+                f"{self._fit_cell(code, code_w)} "
+                f"{self._fit_cell(c.course_name, name_w)} "
+                f"{self._fit_cell(f'{c.credit:.1f}', credit_w)} "
+                f"{self._fit_cell(semester, semester_w)}"
+            )
+
+    def _analyze_set_failure_reason(self, result: SetResult, indent: str):
+        """分析規則組失敗原因"""
+        failed_sub_rules = [sub for sub in result.sub_results if not sub.is_valid]
+        passed_sub_rules = [sub for sub in result.sub_results if sub.is_valid]
+
+        if result.sub_rule_logic == "AND":
+            print(
+                f"{indent}   ⚠️  失敗原因：需要所有子規則都通過，但有 {len(failed_sub_rules)} 個子規則未通過"
+            )
+            if failed_sub_rules:
+                print(f"{indent}      未通過的子規則：")
+                for sub in failed_sub_rules:
+                    print(f"{indent}      - {sub.name}")
+        else:  # OR
+            print(
+                f"{indent}   ⚠️  失敗原因：至少需要一個子規則通過，但所有 {len(result.sub_results)} 個子規則都未通過"
+            )
+
+    def display_summary_statistics(self, student: Student, result: Result):
+        """顯示統計摘要"""
+        print("\n" + "=" * 80)
+        print("                      統計摘要")
+        print("=" * 80)
+
+        # 統計所有認證課程
+        all_courses = []
+        self._collect_all_courses(result, all_courses)
+
+        if all_courses:
+            print(f"📊 總認證課程數：{len(all_courses)} 門")
+            print(
+                f"📊 總認證學分：{sum(course.credit for course in all_courses):.1f} 學分"
+            )
+
+            # 按學年統計
+            year_stats = {}
+            for course in all_courses:
+                year = course.year_taken
+                if year not in year_stats:
+                    year_stats[year] = {"count": 0, "credits": 0}
+                year_stats[year]["count"] += 1
+                year_stats[year]["credits"] += course.credit
+
+            print(f"\n📈 按學年統計：")
+            for year in sorted(year_stats.keys()):
+                stats = year_stats[year]
+                print(
+                    f"   {year} 學年：{stats['count']} 門課程，{stats['credits']:.1f} 學分"
+                )
+        else:
+            print("📊 無認證課程")
+
+    def _collect_all_courses(self, result: Result, course_list: list):
+        """收集所有認證的課程"""
+        if result.result_type == "rule_set":
+            for sub_result in result.sub_results:
+                self._collect_all_courses(sub_result, course_list)
+        elif result.result_type == "rule_all":
+            course_list.extend(result.finished_course_list)
+
+    def perform_evaluation(self, student: Student, rule: Rule):
+        """執行畢業審查評估"""
+        print(f"\n--- 執行畢業審查 ---")
+        print(f"學生：{student.name} ({student.id})")
+        print(f"規則：{rule.name}")
+        print()
+
+        try:
+            # 執行評估
+            print("正在進行畢業審查...")
+            result = self.evaluator.evaluate(rule, student.courses)
+
+            # 顯示詳細結果
+            self.display_evaluation_result(student, rule, result)
+
+            # 顯示統計摘要
+            self.display_summary_statistics(student, result)
+
+            # 詢問是否保存結果
+            save_choice = input("\n是否保存審查結果？(y/n)：").strip().lower()
+            if save_choice == "y":
+                self.save_evaluation_result(student, rule, result)
+
+        except Exception as e:
+            print(f"❌ 評估過程中發生錯誤：{e}")
+            import traceback
+
+            traceback.print_exc()
 
     def run(self):
         """運行 CLI 界面"""

@@ -1,0 +1,175 @@
+{
+    "name": "交通管理科學系 108學年度輔系規則",
+    "description": "最上層規則",
+    "priority": 0,
+    "rule_type": "rule_set",
+    "sub_rule_logic": "AND",
+    "requirement": {
+        "type": "min_credits",
+        "min_credits": 20,
+        "pass_or_none": false
+    },
+    "sub_rules": [
+        {
+            "name": "必修組合",
+            "description": "必修組合",
+            "priority": 0,
+            "rule_type": "rule_set",
+            "sub_rule_logic": "AND",
+            "requirement": {
+                "type": "min_courses",
+                "min_courses": 5,
+                "pass_or_none": false
+            },
+            "sub_rules": [
+                {
+                    "name": "必修列表",
+                    "description": "必修列表",
+                    "priority": 0,
+                    "rule_type": "rule_all",
+                    "requirement": {
+                        "type": "min_courses",
+                        "min_courses": 4,
+                        "pass_or_none": false
+                    },
+                    "course_list": [
+                        "公共運輸",
+                        "運輸經濟",
+                        "運輸管理",
+                        "運輸規劃"
+                    ],
+                    "course_criteria": {}
+                },
+                {
+                    "name": "必修三選一",
+                    "description": "必修三選一",
+                    "priority": 1,
+                    "rule_type": "rule_all",
+                    "requirement": {
+                        "type": "min_courses",
+                        "min_courses": 1,
+                        "pass_or_none": false
+                    },
+                    "course_list": [
+                        "交通工程",
+                        "運輸工程",
+                        "運輸安全"
+                    ],
+                    "course_criteria": {}
+                }
+            ]
+        },
+        {
+            "name": "列表選修",
+            "description": "列表選修",
+            "priority": 1,
+            "rule_type": "rule_set",
+            "sub_rule_logic": "OR",
+            "requirement": {
+                "type": "min_courses",
+                "min_courses": 1,
+                "pass_or_none": false
+            },
+            "sub_rules": [
+                {
+                    "name": "經濟學",
+                    "description": "經濟學",
+                    "priority": 0,
+                    "rule_type": "rule_all",
+                    "requirement": {
+                        "type": "min_courses",
+                        "min_courses": 2,
+                        "pass_or_none": true
+                    },
+                    "course_list": [
+                        "經濟學（一）",
+                        "經濟學（二）"
+                    ],
+                    "course_criteria": {
+                        "department_codes": [
+                            "H5"
+                        ]
+                    }
+                },
+                {
+                    "name": "統計學",
+                    "description": "統計學",
+                    "priority": 1,
+                    "rule_type": "rule_all",
+                    "requirement": {
+                        "type": "min_courses",
+                        "min_courses": 2,
+                        "pass_or_none": true
+                    },
+                    "course_list": [
+                        "統計學（一）",
+                        "統計學（二）"
+                    ],
+                    "course_criteria": {
+                        "department_codes": [
+                            "H5"
+                        ]
+                    }
+                },
+                {
+                    "name": "微積分",
+                    "description": "微積分",
+                    "priority": 2,
+                    "rule_type": "rule_all",
+                    "requirement": {
+                        "type": "min_courses",
+                        "min_courses": 2,
+                        "pass_or_none": true
+                    },
+                    "course_list": [
+                        "微積分（一）",
+                        "微積分（二）"
+                    ],
+                    "course_criteria": {
+                        "department_codes": [
+                            "H5"
+                        ]
+                    }
+                },
+                {
+                    "name":"管理數學",
+                    "description":"管理數學",
+                    "priority":3,
+                    "rule_type":"rule_all",
+                    "requirement":{
+                        "type":"min_courses",
+                        "min_courses":1,
+                        "pass_or_none":false
+                    },
+                    "course_list":[
+                        "管理數學"
+                    ],
+                    "course_criteria":{
+                        "department_codes":[
+                            "H5"
+                        ]
+                    }
+                },
+                {
+                    "name":"作業研究",
+                    "description":"作業研究",
+                    "priority":4,
+                    "rule_type":"rule_all",
+                    "requirement":{
+                        "type":"min_courses",
+                        "min_courses":1,
+                        "pass_or_none":false
+                    },
+                    "course_list":[
+                        "作業研究"
+                    ],
+                    "course_criteria":{
+                        "department_codes":[
+                            "H5"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

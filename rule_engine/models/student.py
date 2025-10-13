@@ -1,6 +1,5 @@
 from pydantic import BaseModel, Field, field_validator, computed_field
 from rule_engine.models.course import StudentCourse
-from enum import Enum
 from typing import Annotated
 
 
