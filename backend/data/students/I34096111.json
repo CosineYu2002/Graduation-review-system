@@ -1,0 +1,2024 @@
+{
+    "name": "方文廷",
+    "id": "I34096111",
+    "major": "AN",
+    "courses": [
+        {
+            "course_name": "暑期研究",
+            "course_codes": [
+                "I335100"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 95,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "臨床生理學",
+            "course_codes": [
+                "I342801"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "血液學",
+            "course_codes": [
+                "I344200"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "專題研究實驗（四）",
+            "course_codes": [
+                "I348500"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 92,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "淺談細胞之電活動",
+            "course_codes": [
+                "I525700"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 90,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "醫療專業與生死",
+            "course_codes": [
+                "I530900"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 95,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "中醫概論",
+            "course_codes": [
+                "I545200"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 93,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "科技輔具學及實習",
+            "course_codes": [
+                "I633600"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "現代本草學",
+            "course_codes": [
+                "I811600"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "中藥方劑學",
+            "course_codes": [
+                "I831400"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 75,
+            "category": "Y",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "仿神經型態計算概論",
+            "course_codes": [
+                "J030900"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 91,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "水生生物療癒",
+            "course_codes": [
+                "C641600"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 74,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "多體學分析與精準醫學應用概論",
+            "course_codes": [
+                "L651400"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 91,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "當代醫食同源特論",
+            "course_codes": [
+                "L651900"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 91,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "水生疾病精準防治策略",
+            "course_codes": [
+                "L652800"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 80,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "高齡休閒運動與營養",
+            "course_codes": [
+                "L654500"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 84,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "綠色照顧與高齡旅遊",
+            "course_codes": [
+                "L654600"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 82,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "數位科技在生物健康的管理與應用",
+            "course_codes": [
+                "L654700"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 80,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "Python 程式設計入門",
+            "course_codes": [
+                "LZ57500"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 98,
+            "category": "Y",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "機能營養醫學與惡性腫瘤預防",
+            "course_codes": [
+                "LZ59200"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 96,
+            "category": "Y",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "瞭解胰島素-基礎到臨床",
+            "course_codes": [
+                "LZ5B000"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 98,
+            "category": "Y",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "親愛的,你快樂嗎?淺談大腦多巴胺系統",
+            "course_codes": [
+                "LZ5C600"
+            ],
+            "credit": 1.5,
+            "course_type": 2,
+            "tag": [],
+            "grade": 96,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "設計思考教中學",
+            "course_codes": [
+                "P383800"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 84,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "生技醫材設計與開發",
+            "course_codes": [
+                "P882300"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 92,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "高等生物統計學-以新冠肺炎研究數據為例",
+            "course_codes": [
+                "R254500"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 95,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "創業思維與啟航（一）-創業發展",
+            "course_codes": [
+                "T357300"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 83,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "人體研究計畫與醫療器材相關法規暨倫理規範",
+            "course_codes": [
+                "T380300"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 86,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "創業思維與啟航（五）-認證及規範",
+            "course_codes": [
+                "T390100"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 87,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "醫療器材創新設計（一）",
+            "course_codes": [
+                "P853510"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 63,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "醫事法與醫療疏失案例研究",
+            "course_codes": [
+                "U25H400"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 85,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "行為科學的職涯探索與體驗學習",
+            "course_codes": [
+                "U753500"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 100,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "基礎學術英文",
+            "course_codes": [
+                "A110500"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 78,
+            "category": "X",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "聽力與摘記練習",
+            "course_codes": [
+                "A110800"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 93,
+            "category": "X",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "體適能運動（男）",
+            "course_codes": [
+                "A2066A0"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "拳擊有氧與健康體能",
+            "course_codes": [
+                "A215400"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 93,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "健康有氧（男女）",
+            "course_codes": [
+                "A223500"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 92,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "撞球（男女）",
+            "course_codes": [
+                "A226101"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 87,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "青少年心理學",
+            "course_codes": [
+                "A420600"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 88,
+            "category": "U",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "教育行政",
+            "course_codes": [
+                "A430400"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 73,
+            "category": "U",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "服務學習（三）—單車節招生服務與反思",
+            "course_codes": [
+                "A625900"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 97,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "服務學習（三）—單車節招生服務與反思",
+            "course_codes": [
+                "A625900"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "基礎國文（綜合文類）（一）",
+            "course_codes": [
+                "A710110"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 90,
+            "category": "X",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "基礎國文（綜合文類）（二）",
+            "course_codes": [
+                "A710120"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 92,
+            "category": "X",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "踏溯台南",
+            "course_codes": [
+                "A918701"
+            ],
+            "credit": 1.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 98,
+            "category": "X",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "諾貝爾生醫獎得主所改變的世界",
+            "course_codes": [
+                "A92A600"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 95,
+            "category": "X",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "日常疼痛控制",
+            "course_codes": [
+                "A92C400"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 92,
+            "category": "X",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "拍出跨域資訊應用首部曲--python",
+            "course_codes": [
+                "A92M500"
+            ],
+            "credit": 1.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 95,
+            "category": "X",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "生涯規劃-華立企業精英論壇",
+            "course_codes": [
+                "A92R900"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 93,
+            "category": "X",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "通識專題講座-大學導航",
+            "course_codes": [
+                "A934400"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 96,
+            "category": "X",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "工程概論",
+            "course_codes": [
+                "A940101"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 79,
+            "category": "X",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "通識教育生活實踐（甲）",
+            "course_codes": [
+                "A94B400"
+            ],
+            "credit": 1.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 555,
+            "category": "X",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "心理學",
+            "course_codes": [
+                "A974500"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 92,
+            "category": "X",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "流行病學與健康生活",
+            "course_codes": [
+                "XY19900"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 555,
+            "category": "Y",
+            "year_taken": 108,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "通識教育生活實踐（一）",
+            "course_codes": [
+                "A9K0201"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 555,
+            "category": "X",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "影視幕後的商業運作",
+            "course_codes": [
+                "XY1A700"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 75,
+            "category": "R",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "通識教育生活實踐（二）",
+            "course_codes": [
+                "A9K0202"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 555,
+            "category": "X",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "AN09980"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 85,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "AN09980"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 86,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "AN09980"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 85,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "跨領域問題導向-初階專題",
+            "course_codes": [
+                "AN16000"
+            ],
+            "credit": 5.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "設計思考與機器學習遇見防疫素人",
+            "course_codes": [
+                "AN17800"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 92,
+            "category": "Y",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "透視幸福的奧秘",
+            "course_codes": [
+                "AN1E000"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 100,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "跨領域問題導向-進階專題",
+            "course_codes": [
+                "AN20900"
+            ],
+            "credit": 4.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "跨領域問題導向-高階專題",
+            "course_codes": [
+                "AN30300"
+            ],
+            "credit": 4.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 80,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "跨領域問題導向-畢業專題",
+            "course_codes": [
+                "AN40300"
+            ],
+            "credit": 5.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 78,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "日文（一）",
+            "course_codes": [
+                "B113810"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "家將文化探索體驗",
+            "course_codes": [
+                "B33D700"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "細胞生物學",
+            "course_codes": [
+                "C522900"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "分子生物學",
+            "course_codes": [
+                "C531600"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "生技產業概論",
+            "course_codes": [
+                "C610600"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 83,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "普通生物學（一）",
+            "course_codes": [
+                "C610710"
+            ],
+            "credit": 4.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 60,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "普通生物學（二）",
+            "course_codes": [
+                "C610720"
+            ],
+            "credit": 4.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "生物科技概論",
+            "course_codes": [
+                "C611800"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "分子生物學",
+            "course_codes": [
+                "C620200"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 44,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "生物資訊學方法",
+            "course_codes": [
+                "C621600"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 100,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "探索人體腸道微生物生態",
+            "course_codes": [
+                "C633600"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "憲法",
+            "course_codes": [
+                "D210201"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 56,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "國際海洋環境法",
+            "course_codes": [
+                "D245900"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "醫療經濟學實證與數據分析",
+            "course_codes": [
+                "D533700"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 85,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "心理學概論（一）",
+            "course_codes": [
+                "D810910"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 62,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "心理學概論（二）",
+            "course_codes": [
+                "D810920"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 52,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "心理學概論（二）",
+            "course_codes": [
+                "D810920"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "心理與教育統計學（一）",
+            "course_codes": [
+                "D820103"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 74,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "認知心理學",
+            "course_codes": [
+                "D820200"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "心理與教育統計學（二）",
+            "course_codes": [
+                "D820303"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "性格心理學",
+            "course_codes": [
+                "D821301"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 74,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "心理實驗法（一）",
+            "course_codes": [
+                "D821610"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 99,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "心理實驗法（二）",
+            "course_codes": [
+                "D821620"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 79,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "大學生生存守則：身心健康的自我照顧",
+            "course_codes": [
+                "D823300"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 94,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "生理心理學",
+            "course_codes": [
+                "D830100"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 80,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "社會心理學",
+            "course_codes": [
+                "D830400"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "心理學家的podcasts",
+            "course_codes": [
+                "D843100"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 90,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "5G網路、衛星通訊導論",
+            "course_codes": [
+                "E222800"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 96,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "設計與品牌行銷",
+            "course_codes": [
+                "F343800"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 90,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "程式設計（二）",
+            "course_codes": [
+                "F711120"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "微積分（二）",
+            "course_codes": [
+                "F715621"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "線性代數",
+            "course_codes": [
+                "F720100"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "演算法",
+            "course_codes": [
+                "F721300"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "電腦網路概論",
+            "course_codes": [
+                "F723500"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "Linux系統程式設計",
+            "course_codes": [
+                "F723700"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 99,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "Objective-C手機App程式開發基石",
+            "course_codes": [
+                "F723800"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 100,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "運動科學之資料與模型",
+            "course_codes": [
+                "F724500"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "資料分析與學習基石",
+            "course_codes": [
+                "F742600"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 76,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "網頁程式開發",
+            "course_codes": [
+                "H335900"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 75,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "營養學",
+            "course_codes": [
+                "I231300"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 80,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "老人護理",
+            "course_codes": [
+                "I232500"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 96,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "體育（一）",
+            "course_codes": [
+                "A215500"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 81,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "普通化學",
+            "course_codes": [
+                "C515901"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 82,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "計算機概論",
+            "course_codes": [
+                "C523400"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 97,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "I309920"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "I309920"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "I309920"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "I309920"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "I309920"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "I309920"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "醫技學導論",
+            "course_codes": [
+                "I310100"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 93,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "普通化學實驗",
+            "course_codes": [
+                "I311400"
+            ],
+            "credit": 1.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 80,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "細胞生物學",
+            "course_codes": [
+                "I311600"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 67,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "分析化學含實驗",
+            "course_codes": [
+                "I312000"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 90,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "專題研究導論",
+            "course_codes": [
+                "I312400"
+            ],
+            "credit": 1.0,
+            "course_type": 3,
+            "tag": [],
+            "grade": 95,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "微積分（一）",
+            "course_codes": [
+                "I316512"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 98,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "微積分（二）",
+            "course_codes": [
+                "I316522"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "普通生物學",
+            "course_codes": [
+                "I317401"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 83,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "服務學習（一）",
+            "course_codes": [
+                "I317910"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 100,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "服務學習（二）",
+            "course_codes": [
+                "I317920"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 100,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "服務學習（三）",
+            "course_codes": [
+                "I317930"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "生物統計",
+            "course_codes": [
+                "I322000"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 83,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "生理學",
+            "course_codes": [
+                "I322401"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 72,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "有機化學",
+            "course_codes": [
+                "I322503"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 90,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "解剖學（含實驗）",
+            "course_codes": [
+                "I323100"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 81,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "公共衛生概論",
+            "course_codes": [
+                "I323400"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 80,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "專題研究實驗（一）",
+            "course_codes": [
+                "I323510"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 92,
+            "category": " ",
+            "year_taken": 109,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "專題研究實驗（二）",
+            "course_codes": [
+                "I323520"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 95,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "專題研究實驗（三）",
+            "course_codes": [
+                "I323530"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 93,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "生物化學（一）",
+            "course_codes": [
+                "I323600"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 63,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "生物化學（含實驗） （二）",
+            "course_codes": [
+                "I323700"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 60,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "免疫學",
+            "course_codes": [
+                "I323800"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 58,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "臨床血液學實驗",
+            "course_codes": [
+                "I330200"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "寄生蟲學含實驗",
+            "course_codes": [
+                "I331300"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "病理學",
+            "course_codes": [
+                "I331500"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "臨床鏡檢學（含實驗）",
+            "course_codes": [
+                "I333500"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 82,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "血庫學（含實驗）",
+            "course_codes": [
+                "I334000"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 61,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "微生物學（含實驗）",
+            "course_codes": [
+                "I334700"
+            ],
+            "credit": 4.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 74,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "專題研究",
+            "course_codes": [
+                "I335000"
+            ],
+            "credit": 1.0,
+            "course_type": 3,
+            "tag": [],
+            "grade": 94,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        }
+    ],
+    "admission_year": 109
+}

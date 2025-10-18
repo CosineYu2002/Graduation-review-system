@@ -1,0 +1,1198 @@
+{
+    "name": "王邱鈺為",
+    "id": "B54106168",
+    "major": "AN",
+    "courses": [
+        {
+            "course_name": "初階MATLAB",
+            "course_codes": [
+                "E634700"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "Python在資料科學之應用",
+            "course_codes": [
+                "F533300"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 94,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "影像處理、電腦視覺及深度學習概論",
+            "course_codes": [
+                "F743000"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 48,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "計算機概論",
+            "course_codes": [
+                "H210301"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 79,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "線性代數",
+            "course_codes": [
+                "H210400"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 73,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "微積分（一）",
+            "course_codes": [
+                "H210810"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 64,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "微積分（二）",
+            "course_codes": [
+                "H210820"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 62,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "抽樣調查",
+            "course_codes": [
+                "H220401"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "日文（一）",
+            "course_codes": [
+                "A122910"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 79,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "機率概論",
+            "course_codes": [
+                "H220702"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 50,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "日文（二）",
+            "course_codes": [
+                "A122920"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 85,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "數理統計（一）",
+            "course_codes": [
+                "H222300"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "多變量分析",
+            "course_codes": [
+                "H230500"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "資料處理",
+            "course_codes": [
+                "H233600"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 95,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "實驗設計",
+            "course_codes": [
+                "H236301"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "統計模擬",
+            "course_codes": [
+                "H241200"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "Python程式設計入門",
+            "course_codes": [
+                "J010100"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "計算認知科學",
+            "course_codes": [
+                "J030400"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "統計預測與機器學習",
+            "course_codes": [
+                "J030600"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "最佳化理論與應用",
+            "course_codes": [
+                "M050200"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "臨床研究資料分析與軟體實務",
+            "course_codes": [
+                "S954101"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 84,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "傳染病流行病學",
+            "course_codes": [
+                "T851200"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 86,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "迴歸分析",
+            "course_codes": [
+                "U361400"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 89,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "日文（三）",
+            "course_codes": [
+                "A160130"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 84,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "日文（四）",
+            "course_codes": [
+                "A160140"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 79,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "體適能運動（男）",
+            "course_codes": [
+                "A2066A0"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "體適能運動與健康體能",
+            "course_codes": [
+                "A211800"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "健訓（男、女）",
+            "course_codes": [
+                "A224500"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 73,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "大學國文-現代文學選讀",
+            "course_codes": [
+                "A716500"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 87,
+            "category": "X",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "大學國文-古典小說選讀",
+            "course_codes": [
+                "A716600"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 81,
+            "category": "X",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "戲劇與小說",
+            "course_codes": [
+                "A918600"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 86,
+            "category": "X",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "踏溯台南",
+            "course_codes": [
+                "A918701"
+            ],
+            "credit": 1.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 23,
+            "category": "X",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "愛爾蘭歷史與文化",
+            "course_codes": [
+                "A92K800"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 999,
+            "category": "X",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "戲劇製作",
+            "course_codes": [
+                "A92L000"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 999,
+            "category": "X",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "性別與運動",
+            "course_codes": [
+                "A92O600"
+            ],
+            "credit": 2.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 82,
+            "category": "X",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "生命科學概論",
+            "course_codes": [
+                "A934101"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 85,
+            "category": "X",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "經濟學概論",
+            "course_codes": [
+                "A954101"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 77,
+            "category": "X",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "社會學概論",
+            "course_codes": [
+                "A955000"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 84,
+            "category": "X",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "身體結構與功能",
+            "course_codes": [
+                "A960502"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 70,
+            "category": "X",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "政治學概論",
+            "course_codes": [
+                "A979600"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 88,
+            "category": "X",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "踏溯台南",
+            "course_codes": [
+                "A918701"
+            ],
+            "credit": 1.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 90,
+            "category": "X",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "AN09980"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 85,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "AN09980"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 85,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "AN09980"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 87,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "AN09980"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 87,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "AN09980"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 85,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "創意時光機：自我探索與跨域對話",
+            "course_codes": [
+                "AN14100"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 95,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "跨領域問題導向-初階專題",
+            "course_codes": [
+                "AN16000"
+            ],
+            "credit": 5.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 78,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "長期照護之虛擬實境復健運動設計",
+            "course_codes": [
+                "AN1C900"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 87,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "透視幸福的奧秘",
+            "course_codes": [
+                "AN1E000"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 99,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "簡報製作與表達技巧",
+            "course_codes": [
+                "AN20201"
+            ],
+            "credit": 1.5,
+            "course_type": 2,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "跨領域問題導向-進階專題",
+            "course_codes": [
+                "AN20900"
+            ],
+            "credit": 4.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 999,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "創新中的設計思維與工具",
+            "course_codes": [
+                "AN23500"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 95,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "跨領域問題導向-高階專題",
+            "course_codes": [
+                "AN30300"
+            ],
+            "credit": 4.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 80,
+            "category": " ",
+            "year_taken": 113,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "二日成名設計思考戲劇製演松",
+            "course_codes": [
+                "AN40600"
+            ],
+            "credit": 1.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 91,
+            "category": " ",
+            "year_taken": 112,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "體育（一）",
+            "course_codes": [
+                "A215500"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 87,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "B509910"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "操行",
+            "course_codes": [
+                "B509920"
+            ],
+            "credit": 0.0,
+            "course_type": 0,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "文化與社會基本議題",
+            "course_codes": [
+                "B510401"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 82,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "台灣語言基礎及寫作（台語）（一）",
+            "course_codes": [
+                "B511010"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 73,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "台灣語言基礎及寫作（客語）（一）",
+            "course_codes": [
+                "B511410"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 93,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "台灣語言基礎及寫作（客語）（二）",
+            "course_codes": [
+                "B511420"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 84,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "台灣語言基礎及寫作（原住民語）（一）",
+            "course_codes": [
+                "B511510"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 88,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "台灣語言基礎及寫作（原住民語）（二）",
+            "course_codes": [
+                "B511520"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 78,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "台灣歷史與文化",
+            "course_codes": [
+                "B514700"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 72,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "文學文本解讀",
+            "course_codes": [
+                "B515200"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 86,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "台灣文學綜觀",
+            "course_codes": [
+                "B516000"
+            ],
+            "credit": 2.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 93,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "現代小說概論",
+            "course_codes": [
+                "B516100"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 81,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "服務學習（一）",
+            "course_codes": [
+                "B517810"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 100,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "服務學習（二）",
+            "course_codes": [
+                "B517820"
+            ],
+            "credit": 0.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 95,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "媒體社會學",
+            "course_codes": [
+                "B543400"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 87,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "人工智慧在社會科學中的應用",
+            "course_codes": [
+                "D010500"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 93,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "中華民國憲法與政府",
+            "course_codes": [
+                "D410211"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 96,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "應用統計",
+            "course_codes": [
+                "D430100"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 85,
+            "category": " ",
+            "year_taken": 110,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "心理學概論（一）",
+            "course_codes": [
+                "D810910"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 74,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "心理學概論（二）",
+            "course_codes": [
+                "D810920"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 70,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "心理與教育統計學（一）",
+            "course_codes": [
+                "D820103"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 76,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "認知心理學",
+            "course_codes": [
+                "D820200"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 77,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "心理與教育統計學（二）",
+            "course_codes": [
+                "D820303"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 80,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "性格心理學",
+            "course_codes": [
+                "D821301"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 87,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "心理實驗法（一）",
+            "course_codes": [
+                "D821610"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 84,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 1,
+            "recognized": false
+        },
+        {
+            "course_name": "R語言資料視覺化",
+            "course_codes": [
+                "D823000"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 777,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "社會心理學",
+            "course_codes": [
+                "D830400"
+            ],
+            "credit": 3.0,
+            "course_type": 1,
+            "tag": [],
+            "grade": 74,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "Python互動程式設計入門",
+            "course_codes": [
+                "E121000"
+            ],
+            "credit": 2.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 94,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        },
+        {
+            "course_name": "大數據與機器學習導論",
+            "course_codes": [
+                "E422300"
+            ],
+            "credit": 3.0,
+            "course_type": 2,
+            "tag": [],
+            "grade": 95,
+            "category": " ",
+            "year_taken": 111,
+            "semester_taken": 2,
+            "recognized": false
+        }
+    ],
+    "admission_year": 110
+}

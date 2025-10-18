@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, status, UploadFile, File
+from fastapi import APIRouter, HTTPException, status, UploadFile, File, Form
 from pathlib import Path
 
 from rule_engine.models.student import Student
@@ -48,7 +48,10 @@ def get_student_detail(student_id: str):
 
 
 @router.post("/upload-excel", response_model=APIResponse[list[StudentBasicInfo]])
-async def upload_excel_students(file: UploadFile = File(...), major: str = ""):
+async def upload_excel_students(
+    file: UploadFile = File(...),
+    major: str = Form(default="", description="主修科系代號"),
+):
     """
     上傳 Excel 檔案並批量新增學生資料
 

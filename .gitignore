@@ -8,3 +8,4 @@ venv/
 data/students/
 evaluation_results/
 __pycache__/
+.venv/
