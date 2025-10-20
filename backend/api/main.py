@@ -29,7 +29,7 @@ def health_check():
     return {"status": "healthy"}
 
 
-app.include_router(students_router.router)
-app.include_router(rules_router.router)
-app.include_router(review_router.router)
-app.include_router(results_router.router)
+app.include_router(students_router.router,prefix="/api")
+app.include_router(rules_router.router,prefix="/api")
+app.include_router(review_router.router,prefix="/api")
+app.include_router(results_router.router,prefix="/api")
