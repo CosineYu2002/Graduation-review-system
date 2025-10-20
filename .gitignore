@@ -5,11 +5,7 @@ test.py
 .pytest_cache/
 .vscode/
 venv/
-students/
-rule_updater/__pycache__/
-rule_engine/__pycache__/
-rule_engine/models/__pycache__/
-crawler/__pycache__/
-tests/unit/rule_engine/__pycache__/
+data/students/
 evaluation_results/
 __pycache__/
+.venv/
