@@ -177,6 +177,9 @@ class Evaluator:
         self.registry = evaluator_registry
 
     def evaluate(self, rule: Rule, student_courses: list[StudentCourse]) -> Result:
+        for course in student_courses:
+            course.recognized = False
+
         try:
             evaluator = self.registry.create_evaluator(rule.rule_type)
             result = evaluator.evaluate(rule, student_courses)

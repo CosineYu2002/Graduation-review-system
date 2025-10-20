@@ -4,7 +4,8 @@ from pathlib import Path
 from rule_engine.models.student import Student
 from rule_engine.factory import StudentFactory
 from api.crud.student_crud import StudentCRUD
-from api.models.student_models import APIResponse, StudentBasicInfo
+from api.models.student_models import StudentBasicInfo
+from api.models.response_models import APIResponse
 
 router = APIRouter(prefix="/students", tags=["students"])
 

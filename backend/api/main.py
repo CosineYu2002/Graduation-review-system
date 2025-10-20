@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api.routers import students
+from api.routers import students_router, rules_router, review_router, results_router
 
 app = FastAPI(title="畢業審查系統 API")
 
@@ -29,4 +29,7 @@ def health_check():
     return {"status": "healthy"}
 
 
-app.include_router(students.router)
+app.include_router(students_router.router)
+app.include_router(rules_router.router)
+app.include_router(review_router.router)
+app.include_router(results_router.router)

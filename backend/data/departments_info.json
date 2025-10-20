@@ -1,4 +1,9 @@
 {
+    "AN":{
+        "name_zh_tw": "全校不分系學士學位學程",
+        "name_en": "Cross College Elite Program",
+        "college": "第十學院"
+    },
     "B1": {
         "name_zh_tw": "中國文學系學士班",
         "name_en": "Department of Chinese Literature, Bachelor Program",

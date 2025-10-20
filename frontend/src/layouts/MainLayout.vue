@@ -52,13 +52,6 @@ const pages = [
     route: '/rules',
   },
   {
-    name: 'evaluate',
-    title: '開始審查',
-    caption: '執行畢業學分審查',
-    icon: 'fact_check',
-    route: '/evaluate',
-  },
-  {
     name: 'results',
     title: '審查結果',
     caption: '查看審查結果與詳細報告',

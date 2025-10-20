@@ -39,19 +39,4 @@ class AllResult(BaseEvaluationResult):
     ]
 
 
-"""
-class CCEPResult(BaseEvaluationResult):
-    result_type: Annotated[
-        Literal["rule_ccep"],
-        Field("rule_ccep", description="結果類型"),
-    ]
-    sub_results: Annotated[
-        list[Result], Field(default_factory=list, description="子規則結果列表")
-    ]
-    college_course_list: Annotated[
-        list[ResultCourse],
-        Field(default_factory=list, description="符合學院規則的課程列表"),
-    ]
-"""
-
 Result = Annotated[Union[SetResult, AllResult], Field(discriminator="result_type")]
