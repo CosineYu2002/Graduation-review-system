@@ -104,6 +104,61 @@ def create_rule(request: CreateRuleRequest):
         )
 
 
+@router.put(
+    "/{department_code}/{admission_year}/{rule_type}",
+    response_model=APIResponse[RuleBasicInfo],
+)
+def update_rule(
+    department_code: str,
+    admission_year: int,
+    rule_type: RuleTypeEnum,
+    request: CreateRuleRequest,
+):
+    """
+    更新畢業規則
+
+    Parameters:
+    - department_code: 系所代碼
+    - admission_year: 入學年度
+    - rule_type: 規則類型
+    - request: 更新的規則內容
+    """
+    try:
+        # 確保路徑參數與請求體一致
+        if (
+            request.department_code != department_code
+            or request.admission_year != admission_year
+            or request.rule_type != rule_type
+        ):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="路徑參數與請求內容不一致",
+            )
+
+        rule_detail = RuleCRUD.update_rule(request)
+
+        return APIResponse(
+            success=True,
+            message=f"成功更新 {rule_detail.department_name} {request.admission_year} 學年度規則",
+            data=rule_detail,
+        )
+    except ValueError as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e),
+        )
+    except FileNotFoundError as e:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=str(e),
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"更新規則失敗: {str(e)}",
+        )
+
+
 @router.delete(
     "/{department_code}/{admission_year}/{rule_type}", response_model=APIResponse[None]
 )

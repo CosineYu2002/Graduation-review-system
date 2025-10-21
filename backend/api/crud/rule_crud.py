@@ -181,6 +181,50 @@ class RuleCRUD:
         )
 
     @staticmethod
+    def update_rule(request: CreateRuleRequest) -> RuleBasicInfo:
+        """
+        更新規則
+
+        Args:
+            request: 更新規則請求
+
+        Returns:
+            RuleBasicInfo: 更新後的規則基本資訊
+
+        Raises:
+            ValueError: 系所代碼不存在
+            FileNotFoundError: 規則不存在
+        """
+        # 檢查系所是否存在
+        departments_info = RuleCRUD._load_departments_info()
+        if request.department_code not in departments_info:
+            raise ValueError(f"系所代碼 {request.department_code} 不存在")
+
+        # 構建檔案路徑
+        dept_dir = Path("data/rules") / request.department_code
+        filename = f"{request.admission_year}_{request.rule_type.value}.json"
+        rule_file = dept_dir / filename
+
+        if not rule_file.exists():
+            raise FileNotFoundError(
+                f"{request.department_code} {request.admission_year} 學年度 {request.rule_type.value} 規則不存在"
+            )
+
+        # 更新檔案
+        with open(rule_file, "w", encoding="utf-8") as f:
+            json.dump(
+                request.rule_content.model_dump(), f, ensure_ascii=False, indent=4
+            )
+
+        return RuleBasicInfo(
+            department_code=request.department_code,
+            department_name=departments_info[request.department_code]["name_zh_tw"],
+            admission_year=request.admission_year,
+            college=departments_info[request.department_code]["college"],
+            rule_type=request.rule_type,
+        )
+
+    @staticmethod
     def delete_rule(
         department_code: str, admission_year: int, rule_type: RuleTypeEnum
     ) -> bool:
